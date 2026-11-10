@@ -1,0 +1,354 @@
+[
+  {
+    "name": "Ear inner warm",
+    "base_color_linear": [
+      0.6000000238418579,
+      0.36500000953674316,
+      0.3499999940395355,
+      1.0
+    ],
+    "roughness": 0.5,
+    "metallic": 0.0
+  },
+  {
+    "name": "Embroidery • raised pearl thread",
+    "base_color_linear": [
+      0.9100000262260437,
+      0.9200000166893005,
+      0.9549999833106995,
+      1.0
+    ],
+    "roughness": 0.47999998927116394,
+    "metallic": 0.0
+  },
+  {
+    "name": "Eye catchlight",
+    "base_color_linear": [
+      0.9800000190734863,
+      0.9900000095367432,
+      1.0,
+      1.0
+    ],
+    "roughness": 0.10000000149011612,
+    "metallic": 0.0
+  },
+  {
+    "name": "Eye · warm sclera",
+    "base_color_linear": [
+      0.9100000262260437,
+      0.9300000071525574,
+      0.9399999976158142,
+      1.0
+    ],
+    "roughness": 0.25,
+    "metallic": 0.0
+  },
+  {
+    "name": "Eyebrows · silver ash",
+    "base_color_linear": [
+      0.3499999940395355,
+      0.3199999928474426,
+      0.38999998569488525,
+      1.0
+    ],
+    "roughness": 0.699999988079071,
+    "metallic": 0.0
+  },
+  {
+    "name": "Flower centre • pale gold",
+    "base_color_linear": [
+      0.6100000143051147,
+      0.5299999713897705,
+      0.33000001311302185,
+      1.0
+    ],
+    "roughness": 0.3199999928474426,
+    "metallic": 0.44999998807907104
+  },
+  {
+    "name": "Hair | cool underlayers",
+    "base_color_linear": [
+      0.6600000262260437,
+      0.6899999976158142,
+      0.7900000214576721,
+      1.0
+    ],
+    "roughness": 0.4099999964237213,
+    "metallic": 0.05000000074505806
+  },
+  {
+    "name": "Hair | frost highlight",
+    "base_color_linear": [
+      0.8999999761581421,
+      0.9100000262260437,
+      0.9599999785423279,
+      1.0
+    ],
+    "roughness": 0.3199999928474426,
+    "metallic": 0.05000000074505806
+  },
+  {
+    "name": "Hair | pearl silver",
+    "base_color_linear": [
+      0.7799999713897705,
+      0.800000011920929,
+      0.8799999952316284,
+      1.0
+    ],
+    "roughness": 0.36000001430511475,
+    "metallic": 0.05000000074505806
+  },
+  {
+    "name": "Iris · ice blue",
+    "base_color_linear": [
+      0.20000000298023224,
+      0.38999998569488525,
+      0.6000000238418579,
+      1.0
+    ],
+    "roughness": 0.25,
+    "metallic": 0.0
+  },
+  {
+    "name": "Iris · limbal ring",
+    "base_color_linear": [
+      0.07000000029802322,
+      0.15000000596046448,
+      0.27000001072883606,
+      1.0
+    ],
+    "roughness": 0.30000001192092896,
+    "metallic": 0.0
+  },
+  {
+    "name": "Iris · pale blue",
+    "base_color_linear": [
+      0.41999998688697815,
+      0.6399999856948853,
+      0.8299999833106995,
+      1.0
+    ],
+    "roughness": 0.25999999046325684,
+    "metallic": 0.0
+  },
+  {
+    "name": "Lashes · silver charcoal",
+    "base_color_linear": [
+      0.07999999821186066,
+      0.07500000298023224,
+      0.09399999678134918,
+      1.0
+    ],
+    "roughness": 0.6000000238418579,
+    "metallic": 0.0
+  },
+  {
+    "name": "Lip seam",
+    "base_color_linear": [
+      0.4000000059604645,
+      0.23999999463558197,
+      0.27000001072883606,
+      1.0
+    ],
+    "roughness": 0.6000000238418579,
+    "metallic": 0.0
+  },
+  {
+    "name": "Lips · lower highlight",
+    "base_color_linear": [
+      0.7599999904632568,
+      0.49000000953674316,
+      0.47999998927116394,
+      1.0
+    ],
+    "roughness": 0.36000001430511475,
+    "metallic": 0.0
+  },
+  {
+    "name": "Lips · muted rose",
+    "base_color_linear": [
+      0.6499999761581421,
+      0.4000000059604645,
+      0.4099999964237213,
+      1.0
+    ],
+    "roughness": 0.49000000953674316,
+    "metallic": 0.0
+  },
+  {
+    "name": "Nails · sheer ivory",
+    "base_color_linear": [
+      0.8500000238418579,
+      0.7300000190734863,
+      0.7099999785423279,
+      1.0
+    ],
+    "roughness": 0.30000001192092896,
+    "metallic": 0.0
+  },
+  {
+    "name": "Pupil · midnight blue",
+    "base_color_linear": [
+      0.02500000037252903,
+      0.04500000178813934,
+      0.07999999821186066,
+      1.0
+    ],
+    "roughness": 0.2199999988079071,
+    "metallic": 0.0
+  },
+  {
+    "name": "Sash • graphite woven silk",
+    "base_color_linear": [
+      0.014999999664723873,
+      0.017999999225139618,
+      0.024000000208616257,
+      1.0
+    ],
+    "roughness": 0.47999998927116394,
+    "metallic": 0.0
+  },
+  {
+    "name": "Sash • subtle edge stitching",
+    "base_color_linear": [
+      0.0949999988079071,
+      0.10499999672174454,
+      0.11999999731779099,
+      1.0
+    ],
+    "roughness": 0.44999998807907104,
+    "metallic": 0.0
+  },
+  {
+    "name": "Shoe sole",
+    "base_color_linear": [
+      0.017999999225139618,
+      0.01600000075995922,
+      0.020999999716877937,
+      1.0
+    ],
+    "roughness": 0.6499999761581421,
+    "metallic": 0.0
+  },
+  {
+    "name": "Shoes · black leather",
+    "base_color_linear": [
+      0.027000000700354576,
+      0.023000000044703484,
+      0.032999999821186066,
+      1.0
+    ],
+    "roughness": 0.2800000011920929,
+    "metallic": 0.0
+  },
+  {
+    "name": "Silk • cool underlayer",
+    "base_color_linear": [
+      0.699999988079071,
+      0.7250000238418579,
+      0.7900000214576721,
+      1.0
+    ],
+    "roughness": 0.5,
+    "metallic": 0.0
+  },
+  {
+    "name": "Silk • folded ivory edging",
+    "base_color_linear": [
+      0.9399999976158142,
+      0.949999988079071,
+      0.9800000190734863,
+      1.0
+    ],
+    "roughness": 0.36000001430511475,
+    "metallic": 0.0
+  },
+  {
+    "name": "Silk • pearl ivory",
+    "base_color_linear": [
+      0.8199999928474426,
+      0.8349999785423279,
+      0.8799999952316284,
+      1.0
+    ],
+    "roughness": 0.4000000059604645,
+    "metallic": 0.0
+  },
+  {
+    "name": "Skin · porcelain warm",
+    "base_color_linear": [
+      0.800000011920929,
+      0.6629999876022339,
+      0.6359999775886536,
+      1.0
+    ],
+    "roughness": 0.47999998927116394,
+    "metallic": 0.0
+  },
+  {
+    "name": "Socks · white silk",
+    "base_color_linear": [
+      0.8100000023841858,
+      0.8299999833106995,
+      0.8999999761581421,
+      1.0
+    ],
+    "roughness": 0.6499999761581421,
+    "metallic": 0.0
+  },
+  {
+    "name": "Wing • fine vane ridges",
+    "base_color_linear": [
+      0.8600000143051147,
+      0.8799999952316284,
+      0.949999988079071,
+      1.0
+    ],
+    "roughness": 0.5699999928474426,
+    "metallic": 0.0
+  },
+  {
+    "name": "Wing • pearl coverts",
+    "base_color_linear": [
+      0.9399999976158142,
+      0.9549999833106995,
+      1.0,
+      1.0
+    ],
+    "roughness": 0.4300000071525574,
+    "metallic": 0.0
+  },
+  {
+    "name": "Wing • porcelain feather",
+    "base_color_linear": [
+      0.8799999952316284,
+      0.8999999761581421,
+      0.9800000190734863,
+      1.0
+    ],
+    "roughness": 0.49000000953674316,
+    "metallic": 0.0
+  },
+  {
+    "name": "Wing • satin rachis",
+    "base_color_linear": [
+      0.949999988079071,
+      0.9599999785423279,
+      1.0,
+      1.0
+    ],
+    "roughness": 0.3700000047683716,
+    "metallic": 0.0
+  },
+  {
+    "name": "Wing • soft feather shade",
+    "base_color_linear": [
+      0.7799999713897705,
+      0.8100000023841858,
+      0.8999999761581421,
+      1.0
+    ],
+    "roughness": 0.5799999833106995,
+    "metallic": 0.0
+  }
+]
