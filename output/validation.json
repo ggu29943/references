@@ -1,15 +1,288 @@
 {
+  "weapon_variants": [
+    "image_reference",
+    "text_plain"
+  ],
+  "weapon_blade_length_m": 0.8333333333333333,
+  "weapon_chi_conversion_provisional": true,
   "blender": "4.3.2",
   "units": "meters",
   "target": "Unreal Engine",
-  "status": "reference-based first iteration; written setting pending",
+  "status": "canonical character revision; UE validation pending",
+  "canon": {
+    "character_height_m": 1.7,
+    "expanded_wingspan_m": 6.0,
+    "source_to_canon_scale": 0.9895326255089344,
+    "ground_offset_m": -0.0,
+    "eye_catchlights": false,
+    "clothing": "plain minimal layered daily robe",
+    "source": "docs/SOURCE_LORE.md"
+  },
   "bones": 90,
-  "objects": 137,
-  "triangles_base": 180000,
-  "triangles_winged": 232800,
-  "materials": 32,
+  "objects": 104,
+  "triangles_base": 141920,
+  "triangles_winged": 194720,
+  "materials": 28,
   "skin_errors": [],
   "meshes": [
+    {
+      "name": "Ear antihelix r",
+      "vertices": 136,
+      "triangles": 256,
+      "morphs": []
+    },
+    {
+      "name": "Lower eyelid r",
+      "vertices": 99,
+      "triangles": 128,
+      "morphs": [
+        "Basis",
+        "Blink_R"
+      ]
+    },
+    {
+      "name": "Upper lash l",
+      "vertices": 1544,
+      "triangles": 3072,
+      "morphs": [
+        "Basis",
+        "Blink_L"
+      ]
+    },
+    {
+      "name": "Body · torso",
+      "vertices": 672,
+      "triangles": 1340,
+      "morphs": []
+    },
+    {
+      "name": "ring r",
+      "vertices": 96,
+      "triangles": 188,
+      "morphs": []
+    },
+    {
+      "name": "Thumb r",
+      "vertices": 70,
+      "triangles": 136,
+      "morphs": []
+    },
+    {
+      "name": "index l",
+      "vertices": 96,
+      "triangles": 188,
+      "morphs": []
+    },
+    {
+      "name": "Lower lip",
+      "vertices": 136,
+      "triangles": 256,
+      "morphs": []
+    },
+    {
+      "name": "Upper eyelid r",
+      "vertices": 99,
+      "triangles": 128,
+      "morphs": [
+        "Basis",
+        "Blink_R"
+      ]
+    },
+    {
+      "name": "Silver eyebrow r",
+      "vertices": 200,
+      "triangles": 384,
+      "morphs": []
+    },
+    {
+      "name": "Sock foot r",
+      "vertices": 610,
+      "triangles": 1216,
+      "morphs": []
+    },
+    {
+      "name": "Upper eyelid l",
+      "vertices": 99,
+      "triangles": 128,
+      "morphs": [
+        "Basis",
+        "Blink_L"
+      ]
+    },
+    {
+      "name": "Eye white r",
+      "vertices": 429,
+      "triangles": 768,
+      "morphs": [
+        "Basis",
+        "Blink_R"
+      ]
+    },
+    {
+      "name": "Head · quad surface",
+      "vertices": 6240,
+      "triangles": 12476,
+      "morphs": []
+    },
+    {
+      "name": "Heel r",
+      "vertices": 40,
+      "triangles": 76,
+      "morphs": []
+    },
+    {
+      "name": "Leg r",
+      "vertices": 192,
+      "triangles": 380,
+      "morphs": []
+    },
+    {
+      "name": "Lower lid r",
+      "vertices": 1544,
+      "triangles": 3072,
+      "morphs": [
+        "Basis",
+        "Blink_R"
+      ]
+    },
+    {
+      "name": "Nail middle l",
+      "vertices": 114,
+      "triangles": 224,
+      "morphs": []
+    },
+    {
+      "name": "Sock foot l",
+      "vertices": 610,
+      "triangles": 1216,
+      "morphs": []
+    },
+    {
+      "name": "Thumbnail r",
+      "vertices": 114,
+      "triangles": 224,
+      "morphs": []
+    },
+    {
+      "name": "Ear helix l",
+      "vertices": 520,
+      "triangles": 1024,
+      "morphs": []
+    },
+    {
+      "name": "Leg l",
+      "vertices": 192,
+      "triangles": 380,
+      "morphs": []
+    },
+    {
+      "name": "Lower lid l",
+      "vertices": 1544,
+      "triangles": 3072,
+      "morphs": [
+        "Basis",
+        "Blink_L"
+      ]
+    },
+    {
+      "name": "Nail index l",
+      "vertices": 114,
+      "triangles": 224,
+      "morphs": []
+    },
+    {
+      "name": "Nail ring r",
+      "vertices": 114,
+      "triangles": 224,
+      "morphs": []
+    },
+    {
+      "name": "Sole r",
+      "vertices": 354,
+      "triangles": 704,
+      "morphs": []
+    },
+    {
+      "name": "Ear concha l",
+      "vertices": 362,
+      "triangles": 720,
+      "morphs": []
+    },
+    {
+      "name": "Iris l",
+      "vertices": 193,
+      "triangles": 320,
+      "morphs": [
+        "Basis",
+        "Blink_L"
+      ]
+    },
+    {
+      "name": "ring l",
+      "vertices": 96,
+      "triangles": 188,
+      "morphs": []
+    },
+    {
+      "name": "Sole l",
+      "vertices": 354,
+      "triangles": 704,
+      "morphs": []
+    },
+    {
+      "name": "Ear concha r",
+      "vertices": 362,
+      "triangles": 720,
+      "morphs": []
+    },
+    {
+      "name": "Nostril -1",
+      "vertices": 136,
+      "triangles": 256,
+      "morphs": []
+    },
+    {
+      "name": "Thumb l",
+      "vertices": 70,
+      "triangles": 136,
+      "morphs": []
+    },
+    {
+      "name": "index r",
+      "vertices": 96,
+      "triangles": 188,
+      "morphs": []
+    },
+    {
+      "name": "middle l",
+      "vertices": 96,
+      "triangles": 188,
+      "morphs": []
+    },
+    {
+      "name": "middle r",
+      "vertices": 96,
+      "triangles": 188,
+      "morphs": []
+    },
+    {
+      "name": "Nail pinky r",
+      "vertices": 114,
+      "triangles": 224,
+      "morphs": []
+    },
+    {
+      "name": "Palm l",
+      "vertices": 96,
+      "triangles": 188,
+      "morphs": []
+    },
+    {
+      "name": "Upper lip",
+      "vertices": 264,
+      "triangles": 512,
+      "morphs": []
+    },
     {
       "name": "Arm l",
       "vertices": 192,
@@ -17,15 +290,9 @@
       "morphs": []
     },
     {
-      "name": "Ear antihelix l",
-      "vertices": 136,
-      "triangles": 256,
-      "morphs": []
-    },
-    {
-      "name": "Outer lash flick l",
-      "vertices": 136,
-      "triangles": 256,
+      "name": "Eye white l",
+      "vertices": 429,
+      "triangles": 768,
       "morphs": [
         "Basis",
         "Blink_L"
@@ -41,40 +308,49 @@
       ]
     },
     {
-      "name": "Sock foot l",
-      "vertices": 610,
-      "triangles": 1216,
+      "name": "pinky r",
+      "vertices": 96,
+      "triangles": 188,
       "morphs": []
     },
     {
-      "name": "Arm r",
-      "vertices": 192,
-      "triangles": 380,
+      "name": "Thumbnail l",
+      "vertices": 114,
+      "triangles": 224,
       "morphs": []
     },
     {
-      "name": "Leg l",
-      "vertices": 192,
-      "triangles": 380,
+      "name": "Ear antihelix l",
+      "vertices": 136,
+      "triangles": 256,
       "morphs": []
     },
     {
-      "name": "Lower eyelid r",
-      "vertices": 99,
-      "triangles": 128,
+      "name": "Heel l",
+      "vertices": 40,
+      "triangles": 76,
+      "morphs": []
+    },
+    {
+      "name": "Iris r",
+      "vertices": 193,
+      "triangles": 320,
       "morphs": [
         "Basis",
         "Blink_R"
       ]
     },
     {
-      "name": "Nail middle l",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": []
+      "name": "Outer lash flick l",
+      "vertices": 136,
+      "triangles": 256,
+      "morphs": [
+        "Basis",
+        "Blink_L"
+      ]
     },
     {
-      "name": "Nail ring r",
+      "name": "Nail middle r",
       "vertices": 114,
       "triangles": 224,
       "morphs": []
@@ -95,15 +371,15 @@
       ]
     },
     {
-      "name": "middle l",
-      "vertices": 96,
-      "triangles": 188,
+      "name": "Nostril 1",
+      "vertices": 136,
+      "triangles": 256,
       "morphs": []
     },
     {
-      "name": "Nail index r",
-      "vertices": 114,
-      "triangles": 224,
+      "name": "Shoe r",
+      "vertices": 762,
+      "triangles": 1520,
       "morphs": []
     },
     {
@@ -119,363 +395,9 @@
       "morphs": []
     },
     {
-      "name": "Nostril 1",
-      "vertices": 136,
-      "triangles": 256,
-      "morphs": []
-    },
-    {
-      "name": "ring r",
-      "vertices": 96,
-      "triangles": 188,
-      "morphs": []
-    },
-    {
-      "name": "Upper eyelid r",
-      "vertices": 99,
-      "triangles": 128,
-      "morphs": [
-        "Basis",
-        "Blink_R"
-      ]
-    },
-    {
-      "name": "Eye highlight l0",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": [
-        "Basis",
-        "Blink_L"
-      ]
-    },
-    {
       "name": "Mouth line",
       "vertices": 136,
       "triangles": 256,
-      "morphs": []
-    },
-    {
-      "name": "Ear helix r",
-      "vertices": 520,
-      "triangles": 1024,
-      "morphs": []
-    },
-    {
-      "name": "index r",
-      "vertices": 96,
-      "triangles": 188,
-      "morphs": []
-    },
-    {
-      "name": "Lid fold l",
-      "vertices": 136,
-      "triangles": 256,
-      "morphs": []
-    },
-    {
-      "name": "Lid fold r",
-      "vertices": 136,
-      "triangles": 256,
-      "morphs": []
-    },
-    {
-      "name": "Nail middle r",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": []
-    },
-    {
-      "name": "Sock foot r",
-      "vertices": 610,
-      "triangles": 1216,
-      "morphs": []
-    },
-    {
-      "name": "Thumb l",
-      "vertices": 70,
-      "triangles": 136,
-      "morphs": []
-    },
-    {
-      "name": "Ear antihelix r",
-      "vertices": 136,
-      "triangles": 256,
-      "morphs": []
-    },
-    {
-      "name": "Iris r",
-      "vertices": 193,
-      "triangles": 320,
-      "morphs": [
-        "Basis",
-        "Blink_R"
-      ]
-    },
-    {
-      "name": "Leg r",
-      "vertices": 192,
-      "triangles": 380,
-      "morphs": []
-    },
-    {
-      "name": "middle r",
-      "vertices": 96,
-      "triangles": 188,
-      "morphs": []
-    },
-    {
-      "name": "Upper lash l",
-      "vertices": 1544,
-      "triangles": 3072,
-      "morphs": [
-        "Basis",
-        "Blink_L"
-      ]
-    },
-    {
-      "name": "Heel r",
-      "vertices": 40,
-      "triangles": 76,
-      "morphs": []
-    },
-    {
-      "name": "Thumbnail r",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": []
-    },
-    {
-      "name": "Body · torso",
-      "vertices": 672,
-      "triangles": 1340,
-      "morphs": []
-    },
-    {
-      "name": "Eye highlight r0",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": [
-        "Basis",
-        "Blink_R"
-      ]
-    },
-    {
-      "name": "Sole l",
-      "vertices": 354,
-      "triangles": 704,
-      "morphs": []
-    },
-    {
-      "name": "Sole r",
-      "vertices": 354,
-      "triangles": 704,
-      "morphs": []
-    },
-    {
-      "name": "index l",
-      "vertices": 96,
-      "triangles": 188,
-      "morphs": []
-    },
-    {
-      "name": "Lower lip",
-      "vertices": 136,
-      "triangles": 256,
-      "morphs": []
-    },
-    {
-      "name": "Nail ring l",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": []
-    },
-    {
-      "name": "pinky r",
-      "vertices": 96,
-      "triangles": 188,
-      "morphs": []
-    },
-    {
-      "name": "Shoe r",
-      "vertices": 762,
-      "triangles": 1520,
-      "morphs": []
-    },
-    {
-      "name": "Thumbnail l",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": []
-    },
-    {
-      "name": "Thumb r",
-      "vertices": 70,
-      "triangles": 136,
-      "morphs": []
-    },
-    {
-      "name": "Upper eyelid l",
-      "vertices": 99,
-      "triangles": 128,
-      "morphs": [
-        "Basis",
-        "Blink_L"
-      ]
-    },
-    {
-      "name": "Upper lash r",
-      "vertices": 1544,
-      "triangles": 3072,
-      "morphs": [
-        "Basis",
-        "Blink_R"
-      ]
-    },
-    {
-      "name": "Eye white r",
-      "vertices": 429,
-      "triangles": 768,
-      "morphs": [
-        "Basis",
-        "Blink_R"
-      ]
-    },
-    {
-      "name": "Head · quad surface",
-      "vertices": 6240,
-      "triangles": 12476,
-      "morphs": []
-    },
-    {
-      "name": "ring l",
-      "vertices": 96,
-      "triangles": 188,
-      "morphs": []
-    },
-    {
-      "name": "Silver eyebrow r",
-      "vertices": 200,
-      "triangles": 384,
-      "morphs": []
-    },
-    {
-      "name": "Ear helix l",
-      "vertices": 520,
-      "triangles": 1024,
-      "morphs": []
-    },
-    {
-      "name": "Lower lid l",
-      "vertices": 1544,
-      "triangles": 3072,
-      "morphs": [
-        "Basis",
-        "Blink_L"
-      ]
-    },
-    {
-      "name": "Lower lid r",
-      "vertices": 1544,
-      "triangles": 3072,
-      "morphs": [
-        "Basis",
-        "Blink_R"
-      ]
-    },
-    {
-      "name": "Palm r",
-      "vertices": 96,
-      "triangles": 188,
-      "morphs": []
-    },
-    {
-      "name": "Ear concha l",
-      "vertices": 362,
-      "triangles": 720,
-      "morphs": []
-    },
-    {
-      "name": "Heel l",
-      "vertices": 40,
-      "triangles": 76,
-      "morphs": []
-    },
-    {
-      "name": "Iris l",
-      "vertices": 193,
-      "triangles": 320,
-      "morphs": [
-        "Basis",
-        "Blink_L"
-      ]
-    },
-    {
-      "name": "Nail pinky l",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": []
-    },
-    {
-      "name": "Nail pinky r",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": []
-    },
-    {
-      "name": "Ear concha r",
-      "vertices": 362,
-      "triangles": 720,
-      "morphs": []
-    },
-    {
-      "name": "Eye highlight l1",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": [
-        "Basis",
-        "Blink_L"
-      ]
-    },
-    {
-      "name": "pinky l",
-      "vertices": 96,
-      "triangles": 188,
-      "morphs": []
-    },
-    {
-      "name": "Eye highlight r1",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": [
-        "Basis",
-        "Blink_R"
-      ]
-    },
-    {
-      "name": "Nail index l",
-      "vertices": 114,
-      "triangles": 224,
-      "morphs": []
-    },
-    {
-      "name": "Nostril -1",
-      "vertices": 136,
-      "triangles": 256,
-      "morphs": []
-    },
-    {
-      "name": "Eye white l",
-      "vertices": 429,
-      "triangles": 768,
-      "morphs": [
-        "Basis",
-        "Blink_L"
-      ]
-    },
-    {
-      "name": "Palm l",
-      "vertices": 96,
-      "triangles": 188,
       "morphs": []
     },
     {
@@ -485,10 +407,67 @@
       "morphs": []
     },
     {
-      "name": "Upper lip",
-      "vertices": 264,
-      "triangles": 512,
+      "name": "Lid fold r",
+      "vertices": 136,
+      "triangles": 256,
       "morphs": []
+    },
+    {
+      "name": "Nail pinky l",
+      "vertices": 114,
+      "triangles": 224,
+      "morphs": []
+    },
+    {
+      "name": "Palm r",
+      "vertices": 96,
+      "triangles": 188,
+      "morphs": []
+    },
+    {
+      "name": "Arm r",
+      "vertices": 192,
+      "triangles": 380,
+      "morphs": []
+    },
+    {
+      "name": "Ear helix r",
+      "vertices": 520,
+      "triangles": 1024,
+      "morphs": []
+    },
+    {
+      "name": "Lid fold l",
+      "vertices": 136,
+      "triangles": 256,
+      "morphs": []
+    },
+    {
+      "name": "Nail index r",
+      "vertices": 114,
+      "triangles": 224,
+      "morphs": []
+    },
+    {
+      "name": "Nail ring l",
+      "vertices": 114,
+      "triangles": 224,
+      "morphs": []
+    },
+    {
+      "name": "pinky l",
+      "vertices": 96,
+      "triangles": 188,
+      "morphs": []
+    },
+    {
+      "name": "Upper lash r",
+      "vertices": 1544,
+      "triangles": 3072,
+      "morphs": [
+        "Basis",
+        "Blink_R"
+      ]
     },
     {
       "name": "Hair_Crown",
@@ -515,81 +494,21 @@
       "morphs": []
     },
     {
-      "name": "Silk_underskirt_28_soft_pleats",
+      "name": "Silk_plain_underskirt_soft_folds",
       "vertices": 4872,
       "triangles": 9744,
       "morphs": []
     },
     {
-      "name": "Outer_skirt_layer_01",
-      "vertices": 2856,
-      "triangles": 5712,
+      "name": "Plain_outer_robe_layer",
+      "vertices": 4200,
+      "triangles": 8400,
       "morphs": []
     },
     {
-      "name": "Rolled_hem_skirt_01",
+      "name": "Simple_rolled_outer_hem",
       "vertices": 510,
       "triangles": 1008,
-      "morphs": []
-    },
-    {
-      "name": "Outer_skirt_layer_02",
-      "vertices": 2856,
-      "triangles": 5712,
-      "morphs": []
-    },
-    {
-      "name": "Rolled_hem_skirt_02",
-      "vertices": 510,
-      "triangles": 1008,
-      "morphs": []
-    },
-    {
-      "name": "Outer_skirt_layer_03",
-      "vertices": 2856,
-      "triangles": 5712,
-      "morphs": []
-    },
-    {
-      "name": "Rolled_hem_skirt_03",
-      "vertices": 510,
-      "triangles": 1008,
-      "morphs": []
-    },
-    {
-      "name": "Front_embroidered_stole",
-      "vertices": 630,
-      "triangles": 1256,
-      "morphs": []
-    },
-    {
-      "name": "Front_stole_piping_0",
-      "vertices": 210,
-      "triangles": 408,
-      "morphs": []
-    },
-    {
-      "name": "Front_stole_piping_-1",
-      "vertices": 210,
-      "triangles": 408,
-      "morphs": []
-    },
-    {
-      "name": "Back_embroidered_stole",
-      "vertices": 630,
-      "triangles": 1256,
-      "morphs": []
-    },
-    {
-      "name": "Back_stole_piping_0",
-      "vertices": 210,
-      "triangles": 408,
-      "morphs": []
-    },
-    {
-      "name": "Back_stole_piping_-1",
-      "vertices": 210,
-      "triangles": 408,
       "morphs": []
     },
     {
@@ -671,24 +590,6 @@
       "morphs": []
     },
     {
-      "name": "Sleeve_l_tier_3",
-      "vertices": 1088,
-      "triangles": 2176,
-      "morphs": []
-    },
-    {
-      "name": "Sleeve_l_hem_3",
-      "vertices": 198,
-      "triangles": 384,
-      "morphs": []
-    },
-    {
-      "name": "Sleeve_l_pearl_embroidery",
-      "vertices": 594,
-      "triangles": 864,
-      "morphs": []
-    },
-    {
       "name": "Sleeve_r_tier_1",
       "vertices": 1088,
       "triangles": 2176,
@@ -713,117 +614,21 @@
       "morphs": []
     },
     {
-      "name": "Sleeve_r_tier_3",
-      "vertices": 1088,
-      "triangles": 2176,
-      "morphs": []
-    },
-    {
-      "name": "Sleeve_r_hem_3",
-      "vertices": 198,
-      "triangles": 384,
-      "morphs": []
-    },
-    {
-      "name": "Sleeve_r_pearl_embroidery",
-      "vertices": 594,
-      "triangles": 864,
-      "morphs": []
-    },
-    {
-      "name": "Graphite_wide_obi",
+      "name": "Plain_black_cloth_belt",
       "vertices": 800,
       "triangles": 1600,
       "morphs": []
     },
     {
-      "name": "Obi_seam_1.069",
-      "vertices": 486,
-      "triangles": 960,
+      "name": "Short_plain_belt_tie_l",
+      "vertices": 210,
+      "triangles": 416,
       "morphs": []
     },
     {
-      "name": "Obi_seam_1.128",
-      "vertices": 486,
-      "triangles": 960,
-      "morphs": []
-    },
-    {
-      "name": "Ivory_waist_cord",
-      "vertices": 582,
-      "triangles": 1152,
-      "morphs": []
-    },
-    {
-      "name": "Long_black_sash_l",
-      "vertices": 390,
-      "triangles": 776,
-      "morphs": []
-    },
-    {
-      "name": "Black_sash_edge_l0",
-      "vertices": 234,
-      "triangles": 456,
-      "morphs": []
-    },
-    {
-      "name": "Black_sash_edge_l-1",
-      "vertices": 234,
-      "triangles": 456,
-      "morphs": []
-    },
-    {
-      "name": "White_sash_reverse_l",
-      "vertices": 390,
-      "triangles": 776,
-      "morphs": []
-    },
-    {
-      "name": "Long_black_sash_r",
-      "vertices": 390,
-      "triangles": 776,
-      "morphs": []
-    },
-    {
-      "name": "Black_sash_edge_r0",
-      "vertices": 234,
-      "triangles": 456,
-      "morphs": []
-    },
-    {
-      "name": "Black_sash_edge_r-1",
-      "vertices": 234,
-      "triangles": 456,
-      "morphs": []
-    },
-    {
-      "name": "White_sash_reverse_r",
-      "vertices": 390,
-      "triangles": 776,
-      "morphs": []
-    },
-    {
-      "name": "Short_rear_black_sash",
-      "vertices": 250,
-      "triangles": 496,
-      "morphs": []
-    },
-    {
-      "name": "Pearl_floral_vines_on_silk",
-      "vertices": 4752,
-      "triangles": 6912,
-      "morphs": []
-    },
-    {
-      "name": "White_five_petal_waist_blossoms",
-      "vertices": 550,
-      "triangles": 800,
-      "morphs": []
-    },
-    {
-      "name": "Blossom_pale_gold_centres",
-      "vertices": 68,
-      "triangles": 64,
+      "name": "Short_plain_belt_tie_r",
+      "vertices": 210,
+      "triangles": 416,
       "morphs": []
     },
     {
@@ -890,7 +695,22 @@
   "nonfinite_vertices": 0,
   "arm_lift_test": {
     "rotation_degrees": 20,
-    "max_vertex_displacement_m": 0.1624469574225959,
+    "max_vertex_displacement_m": 0.16074660139872068,
     "finite": true
-  }
+  },
+  "folded_wing_bounds_m": {
+    "x": [
+      -0.42666304111480713,
+      0.42666304111480713
+    ],
+    "y": [
+      0.06414508819580078,
+      1.4554271697998047
+    ],
+    "z": [
+      0.21319258213043213,
+      1.379285216331482
+    ]
+  },
+  "wing_bone_length_max_error_m": 4.2405674005596694e-07
 }

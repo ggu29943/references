@@ -1,7 +1,7 @@
 {
   "blender": "4.3.2",
   "source": "output/Yuan_Character.blend",
-  "source_sha256": "5c33cd345a654875c80291d59dbee13b3183e1685817a15a5f1733bbf89d1844",
+  "source_sha256": "dff7a2889750929c7356e6f8b5273770870c16f686b042d111fb9891e569e148",
   "units": "meters; FBX unit conversion enabled",
   "status": "automatic LOD candidates; Unreal visual and deformation review pending",
   "policy": "preserve morph meshes and head-bound non-hair face details; collapse other meshes; normalize to <=4 influences",
@@ -10,8 +10,8 @@
     {
       "level": "LOD1",
       "collapse_ratio_non_face_meshes": 0.45,
-      "source_triangles_base": 180000,
-      "source_triangles_winged": 232800,
+      "source_triangles_base": 141920,
+      "source_triangles_winged": 194720,
       "bones": 90,
       "animation": "Yuan_Idle_4s",
       "meshes": [
@@ -40,42 +40,6 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Back_embroidered_stole",
-          "protected_reason": null,
-          "triangles_before": 1256,
-          "triangles_after": 564,
-          "vertices": 284,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 2,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Back_stole_piping_-1",
-          "protected_reason": null,
-          "triangles_before": 408,
-          "triangles_after": 182,
-          "vertices": 97,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 5,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Back_stole_piping_0",
-          "protected_reason": null,
-          "triangles_before": 408,
-          "triangles_after": 182,
-          "vertices": 97,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 5,
-          "vertices_repaired_to_root": 0
-        },
-        {
           "name": "Black_inner_lapel_L",
           "protected_reason": null,
           "triangles_before": 336,
@@ -93,66 +57,6 @@
           "triangles_before": 336,
           "triangles_after": 150,
           "vertices": 77,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 2,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Black_sash_edge_l-1",
-          "protected_reason": null,
-          "triangles_before": 456,
-          "triangles_after": 204,
-          "vertices": 108,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 2,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Black_sash_edge_l0",
-          "protected_reason": null,
-          "triangles_before": 456,
-          "triangles_after": 204,
-          "vertices": 108,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Black_sash_edge_r-1",
-          "protected_reason": null,
-          "triangles_before": 456,
-          "triangles_after": 204,
-          "vertices": 108,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Black_sash_edge_r0",
-          "protected_reason": null,
-          "triangles_before": 456,
-          "triangles_after": 204,
-          "vertices": 108,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Blossom_pale_gold_centres",
-          "protected_reason": null,
-          "triangles_before": 64,
-          "triangles_after": 28,
-          "vertices": 36,
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 2,
@@ -268,66 +172,6 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Eye highlight l0",
-          "protected_reason": "shape_keys",
-          "triangles_before": 224,
-          "triangles_after": 224,
-          "vertices": 114,
-          "morphs": [
-            "Basis",
-            "Blink_L"
-          ],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Eye highlight l1",
-          "protected_reason": "shape_keys",
-          "triangles_before": 224,
-          "triangles_after": 224,
-          "vertices": 114,
-          "morphs": [
-            "Basis",
-            "Blink_L"
-          ],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Eye highlight r0",
-          "protected_reason": "shape_keys",
-          "triangles_before": 224,
-          "triangles_after": 224,
-          "vertices": 114,
-          "morphs": [
-            "Basis",
-            "Blink_R"
-          ],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Eye highlight r1",
-          "protected_reason": "shape_keys",
-          "triangles_before": 224,
-          "triangles_after": 224,
-          "vertices": 114,
-          "morphs": [
-            "Basis",
-            "Blink_R"
-          ],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
           "name": "Eye white l",
           "protected_reason": "shape_keys",
           "triangles_before": 768,
@@ -378,54 +222,6 @@
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 2,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Front_embroidered_stole",
-          "protected_reason": null,
-          "triangles_before": 1256,
-          "triangles_after": 564,
-          "vertices": 284,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 25,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Front_stole_piping_-1",
-          "protected_reason": null,
-          "triangles_before": 408,
-          "triangles_after": 182,
-          "vertices": 97,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 5,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Front_stole_piping_0",
-          "protected_reason": null,
-          "triangles_before": 408,
-          "triangles_after": 182,
-          "vertices": 97,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 5,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Graphite_wide_obi",
-          "protected_reason": null,
-          "triangles_before": 1600,
-          "triangles_after": 720,
-          "vertices": 360,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 1,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
@@ -544,18 +340,6 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Ivory_waist_cord",
-          "protected_reason": null,
-          "triangles_before": 1152,
-          "triangles_after": 518,
-          "vertices": 265,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
           "name": "Lapel_rolled_edge_-1",
           "protected_reason": null,
           "triangles_before": 192,
@@ -624,30 +408,6 @@
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Long_black_sash_l",
-          "protected_reason": null,
-          "triangles_before": 776,
-          "triangles_after": 348,
-          "vertices": 176,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Long_black_sash_r",
-          "protected_reason": null,
-          "triangles_before": 776,
-          "triangles_after": 348,
-          "vertices": 176,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
@@ -856,30 +616,6 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Obi_seam_1.069",
-          "protected_reason": null,
-          "triangles_before": 960,
-          "triangles_after": 432,
-          "vertices": 219,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Obi_seam_1.128",
-          "protected_reason": null,
-          "triangles_before": 960,
-          "triangles_after": 432,
-          "vertices": 219,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
           "name": "Outer lash flick l",
           "protected_reason": "shape_keys",
           "triangles_before": 256,
@@ -907,42 +643,6 @@
           "invalid_vertices": 0,
           "max_influences": 1,
           "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Outer_skirt_layer_01",
-          "protected_reason": null,
-          "triangles_before": 5712,
-          "triangles_after": 2570,
-          "vertices": 1285,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 134,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Outer_skirt_layer_02",
-          "protected_reason": null,
-          "triangles_before": 5712,
-          "triangles_after": 2570,
-          "vertices": 1285,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 98,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Outer_skirt_layer_03",
-          "protected_reason": null,
-          "triangles_before": 5712,
-          "triangles_after": 2570,
-          "vertices": 1285,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 85,
           "vertices_repaired_to_root": 0
         },
         {
@@ -994,51 +694,27 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Pearl_floral_vines_on_silk",
+          "name": "Plain_black_cloth_belt",
           "protected_reason": null,
-          "triangles_before": 6912,
-          "triangles_after": 3110,
-          "vertices": 2851,
+          "triangles_before": 1600,
+          "triangles_after": 720,
+          "vertices": 360,
           "morphs": [],
           "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 12,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Rolled_hem_skirt_01",
-          "protected_reason": null,
-          "triangles_before": 1008,
-          "triangles_after": 452,
-          "vertices": 229,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
+          "max_influences": 1,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Rolled_hem_skirt_02",
+          "name": "Plain_outer_robe_layer",
           "protected_reason": null,
-          "triangles_before": 1008,
-          "triangles_after": 452,
-          "vertices": 229,
+          "triangles_before": 8400,
+          "triangles_after": 3780,
+          "vertices": 1890,
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 4,
-          "vertices_trimmed_to_four": 2,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Rolled_hem_skirt_03",
-          "protected_reason": null,
-          "triangles_before": 1008,
-          "triangles_after": 452,
-          "vertices": 229,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 2,
+          "vertices_trimmed_to_four": 52,
           "vertices_repaired_to_root": 0
         },
         {
@@ -1066,19 +742,31 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Short_rear_black_sash",
+          "name": "Short_plain_belt_tie_l",
           "protected_reason": null,
-          "triangles_before": 496,
-          "triangles_after": 222,
-          "vertices": 113,
+          "triangles_before": 416,
+          "triangles_after": 186,
+          "vertices": 95,
           "morphs": [],
           "invalid_vertices": 0,
-          "max_influences": 4,
+          "max_influences": 2,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Silk_underskirt_28_soft_pleats",
+          "name": "Short_plain_belt_tie_r",
+          "protected_reason": null,
+          "triangles_before": 416,
+          "triangles_after": 186,
+          "vertices": 95,
+          "morphs": [],
+          "invalid_vertices": 0,
+          "max_influences": 3,
+          "vertices_trimmed_to_four": 0,
+          "vertices_repaired_to_root": 0
+        },
+        {
+          "name": "Silk_plain_underskirt_soft_folds",
           "protected_reason": null,
           "triangles_before": 9744,
           "triangles_after": 4384,
@@ -1086,7 +774,7 @@
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 4,
-          "vertices_trimmed_to_four": 88,
+          "vertices_trimmed_to_four": 98,
           "vertices_repaired_to_root": 0
         },
         {
@@ -1110,6 +798,18 @@
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 1,
+          "vertices_trimmed_to_four": 0,
+          "vertices_repaired_to_root": 0
+        },
+        {
+          "name": "Simple_rolled_outer_hem",
+          "protected_reason": null,
+          "triangles_before": 1008,
+          "triangles_after": 452,
+          "vertices": 229,
+          "morphs": [],
+          "invalid_vertices": 0,
+          "max_influences": 3,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
@@ -1138,30 +838,6 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Sleeve_l_hem_3",
-          "protected_reason": null,
-          "triangles_before": 384,
-          "triangles_after": 172,
-          "vertices": 89,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 2,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Sleeve_l_pearl_embroidery",
-          "protected_reason": null,
-          "triangles_before": 864,
-          "triangles_after": 388,
-          "vertices": 356,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
           "name": "Sleeve_l_tier_1",
           "protected_reason": null,
           "triangles_before": 2176,
@@ -1175,18 +851,6 @@
         },
         {
           "name": "Sleeve_l_tier_2",
-          "protected_reason": null,
-          "triangles_before": 2176,
-          "triangles_after": 978,
-          "vertices": 489,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Sleeve_l_tier_3",
           "protected_reason": null,
           "triangles_before": 2176,
           "triangles_after": 978,
@@ -1222,30 +886,6 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Sleeve_r_hem_3",
-          "protected_reason": null,
-          "triangles_before": 384,
-          "triangles_after": 172,
-          "vertices": 89,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 2,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Sleeve_r_pearl_embroidery",
-          "protected_reason": null,
-          "triangles_before": 864,
-          "triangles_after": 388,
-          "vertices": 356,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
           "name": "Sleeve_r_tier_1",
           "protected_reason": null,
           "triangles_before": 2176,
@@ -1259,18 +899,6 @@
         },
         {
           "name": "Sleeve_r_tier_2",
-          "protected_reason": null,
-          "triangles_before": 2176,
-          "triangles_after": 978,
-          "vertices": 489,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Sleeve_r_tier_3",
           "protected_reason": null,
           "triangles_before": 2176,
           "triangles_after": 978,
@@ -1446,42 +1074,6 @@
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "White_five_petal_waist_blossoms",
-          "protected_reason": null,
-          "triangles_before": 800,
-          "triangles_after": 360,
-          "vertices": 330,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 2,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "White_sash_reverse_l",
-          "protected_reason": null,
-          "triangles_before": 776,
-          "triangles_after": 348,
-          "vertices": 176,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "White_sash_reverse_r",
-          "protected_reason": null,
-          "triangles_before": 776,
-          "triangles_after": 348,
-          "vertices": 176,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
@@ -1714,29 +1306,29 @@
           "vertices_repaired_to_root": 0
         }
       ],
-      "triangles_base": 101883,
-      "triangles_winged": 125631,
-      "actual_ratio_base": 0.5660166666666666,
-      "actual_ratio_winged": 0.53965206185567,
+      "triangles_base": 84283,
+      "triangles_winged": 108031,
+      "actual_ratio_base": 0.5938768320180383,
+      "actual_ratio_winged": 0.5548017666392769,
       "invalid_vertices": 0,
-      "protected_meshes": 36,
+      "protected_meshes": 32,
       "max_influences": 4,
       "files": [
         {
           "name": "Yuan_Base_LOD1.fbx",
-          "bytes": 15504268
+          "bytes": 11898748
         },
         {
           "name": "Yuan_Winged_LOD1.fbx",
-          "bytes": 17115084
+          "bytes": 13519068
         }
       ]
     },
     {
       "level": "LOD2",
       "collapse_ratio_non_face_meshes": 0.2,
-      "source_triangles_base": 180000,
-      "source_triangles_winged": 232800,
+      "source_triangles_base": 141920,
+      "source_triangles_winged": 194720,
       "bones": 90,
       "animation": "Yuan_Idle_4s",
       "meshes": [
@@ -1765,42 +1357,6 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Back_embroidered_stole",
-          "protected_reason": null,
-          "triangles_before": 1256,
-          "triangles_after": 250,
-          "vertices": 127,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 5,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Back_stole_piping_-1",
-          "protected_reason": null,
-          "triangles_before": 408,
-          "triangles_after": 81,
-          "vertices": 45,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 6,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Back_stole_piping_0",
-          "protected_reason": null,
-          "triangles_before": 408,
-          "triangles_after": 81,
-          "vertices": 45,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 6,
-          "vertices_repaired_to_root": 0
-        },
-        {
           "name": "Black_inner_lapel_L",
           "protected_reason": null,
           "triangles_before": 336,
@@ -1818,66 +1374,6 @@
           "triangles_before": 336,
           "triangles_after": 66,
           "vertices": 35,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 2,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Black_sash_edge_l-1",
-          "protected_reason": null,
-          "triangles_before": 456,
-          "triangles_after": 90,
-          "vertices": 48,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Black_sash_edge_l0",
-          "protected_reason": null,
-          "triangles_before": 456,
-          "triangles_after": 90,
-          "vertices": 48,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Black_sash_edge_r-1",
-          "protected_reason": null,
-          "triangles_before": 456,
-          "triangles_after": 90,
-          "vertices": 48,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Black_sash_edge_r0",
-          "protected_reason": null,
-          "triangles_before": 456,
-          "triangles_after": 90,
-          "vertices": 48,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Blossom_pale_gold_centres",
-          "protected_reason": null,
-          "triangles_before": 64,
-          "triangles_after": 12,
-          "vertices": 20,
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 2,
@@ -1993,66 +1489,6 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Eye highlight l0",
-          "protected_reason": "shape_keys",
-          "triangles_before": 224,
-          "triangles_after": 224,
-          "vertices": 114,
-          "morphs": [
-            "Basis",
-            "Blink_L"
-          ],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Eye highlight l1",
-          "protected_reason": "shape_keys",
-          "triangles_before": 224,
-          "triangles_after": 224,
-          "vertices": 114,
-          "morphs": [
-            "Basis",
-            "Blink_L"
-          ],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Eye highlight r0",
-          "protected_reason": "shape_keys",
-          "triangles_before": 224,
-          "triangles_after": 224,
-          "vertices": 114,
-          "morphs": [
-            "Basis",
-            "Blink_R"
-          ],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Eye highlight r1",
-          "protected_reason": "shape_keys",
-          "triangles_before": 224,
-          "triangles_after": 224,
-          "vertices": 114,
-          "morphs": [
-            "Basis",
-            "Blink_R"
-          ],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
           "name": "Eye white l",
           "protected_reason": "shape_keys",
           "triangles_before": 768,
@@ -2103,54 +1539,6 @@
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 2,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Front_embroidered_stole",
-          "protected_reason": null,
-          "triangles_before": 1256,
-          "triangles_after": 250,
-          "vertices": 127,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 14,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Front_stole_piping_-1",
-          "protected_reason": null,
-          "triangles_before": 408,
-          "triangles_after": 81,
-          "vertices": 45,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 6,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Front_stole_piping_0",
-          "protected_reason": null,
-          "triangles_before": 408,
-          "triangles_after": 81,
-          "vertices": 45,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 6,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Graphite_wide_obi",
-          "protected_reason": null,
-          "triangles_before": 1600,
-          "triangles_after": 320,
-          "vertices": 160,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 1,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
@@ -2269,18 +1657,6 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Ivory_waist_cord",
-          "protected_reason": null,
-          "triangles_before": 1152,
-          "triangles_after": 230,
-          "vertices": 118,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
           "name": "Lapel_rolled_edge_-1",
           "protected_reason": null,
           "triangles_before": 192,
@@ -2300,7 +1676,7 @@
           "vertices": 25,
           "morphs": [],
           "invalid_vertices": 0,
-          "max_influences": 3,
+          "max_influences": 2,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
@@ -2349,30 +1725,6 @@
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Long_black_sash_l",
-          "protected_reason": null,
-          "triangles_before": 776,
-          "triangles_after": 154,
-          "vertices": 79,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Long_black_sash_r",
-          "protected_reason": null,
-          "triangles_before": 776,
-          "triangles_after": 154,
-          "vertices": 79,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
@@ -2581,30 +1933,6 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Obi_seam_1.069",
-          "protected_reason": null,
-          "triangles_before": 960,
-          "triangles_after": 192,
-          "vertices": 99,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Obi_seam_1.128",
-          "protected_reason": null,
-          "triangles_before": 960,
-          "triangles_after": 192,
-          "vertices": 99,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
           "name": "Outer lash flick l",
           "protected_reason": "shape_keys",
           "triangles_before": 256,
@@ -2632,42 +1960,6 @@
           "invalid_vertices": 0,
           "max_influences": 1,
           "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Outer_skirt_layer_01",
-          "protected_reason": null,
-          "triangles_before": 5712,
-          "triangles_after": 1142,
-          "vertices": 571,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 148,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Outer_skirt_layer_02",
-          "protected_reason": null,
-          "triangles_before": 5712,
-          "triangles_after": 1142,
-          "vertices": 571,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 141,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Outer_skirt_layer_03",
-          "protected_reason": null,
-          "triangles_before": 5712,
-          "triangles_after": 1142,
-          "vertices": 571,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 126,
           "vertices_repaired_to_root": 0
         },
         {
@@ -2719,51 +2011,27 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Pearl_floral_vines_on_silk",
+          "name": "Plain_black_cloth_belt",
           "protected_reason": null,
-          "triangles_before": 6912,
-          "triangles_after": 1382,
-          "vertices": 1814,
+          "triangles_before": 1600,
+          "triangles_after": 320,
+          "vertices": 160,
           "morphs": [],
           "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 3,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Rolled_hem_skirt_01",
-          "protected_reason": null,
-          "triangles_before": 1008,
-          "triangles_after": 316,
-          "vertices": 161,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
+          "max_influences": 1,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Rolled_hem_skirt_02",
+          "name": "Plain_outer_robe_layer",
           "protected_reason": null,
-          "triangles_before": 1008,
-          "triangles_after": 304,
-          "vertices": 155,
+          "triangles_before": 8400,
+          "triangles_after": 1680,
+          "vertices": 840,
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 4,
-          "vertices_trimmed_to_four": 7,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Rolled_hem_skirt_03",
-          "protected_reason": null,
-          "triangles_before": 1008,
-          "triangles_after": 284,
-          "vertices": 145,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 11,
+          "vertices_trimmed_to_four": 113,
           "vertices_repaired_to_root": 0
         },
         {
@@ -2791,19 +2059,31 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Short_rear_black_sash",
+          "name": "Short_plain_belt_tie_l",
           "protected_reason": null,
-          "triangles_before": 496,
-          "triangles_after": 98,
-          "vertices": 51,
+          "triangles_before": 416,
+          "triangles_after": 82,
+          "vertices": 43,
           "morphs": [],
           "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 2,
+          "max_influences": 2,
+          "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Silk_underskirt_28_soft_pleats",
+          "name": "Short_plain_belt_tie_r",
+          "protected_reason": null,
+          "triangles_before": 416,
+          "triangles_after": 82,
+          "vertices": 43,
+          "morphs": [],
+          "invalid_vertices": 0,
+          "max_influences": 3,
+          "vertices_trimmed_to_four": 0,
+          "vertices_repaired_to_root": 0
+        },
+        {
+          "name": "Silk_plain_underskirt_soft_folds",
           "protected_reason": null,
           "triangles_before": 9744,
           "triangles_after": 1948,
@@ -2839,11 +2119,23 @@
           "vertices_repaired_to_root": 0
         },
         {
+          "name": "Simple_rolled_outer_hem",
+          "protected_reason": null,
+          "triangles_before": 1008,
+          "triangles_after": 200,
+          "vertices": 103,
+          "morphs": [],
+          "invalid_vertices": 0,
+          "max_influences": 3,
+          "vertices_trimmed_to_four": 0,
+          "vertices_repaired_to_root": 0
+        },
+        {
           "name": "Sleeve_l_hem_1",
           "protected_reason": null,
           "triangles_before": 384,
-          "triangles_after": 82,
-          "vertices": 44,
+          "triangles_after": 76,
+          "vertices": 41,
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 2,
@@ -2854,35 +2146,11 @@
           "name": "Sleeve_l_hem_2",
           "protected_reason": null,
           "triangles_before": 384,
-          "triangles_after": 80,
-          "vertices": 43,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Sleeve_l_hem_3",
-          "protected_reason": null,
-          "triangles_before": 384,
           "triangles_after": 76,
           "vertices": 41,
           "morphs": [],
           "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Sleeve_l_pearl_embroidery",
-          "protected_reason": null,
-          "triangles_before": 864,
-          "triangles_after": 172,
-          "vertices": 226,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
+          "max_influences": 3,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
@@ -2911,23 +2179,11 @@
           "vertices_repaired_to_root": 0
         },
         {
-          "name": "Sleeve_l_tier_3",
-          "protected_reason": null,
-          "triangles_before": 2176,
-          "triangles_after": 434,
-          "vertices": 217,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
           "name": "Sleeve_r_hem_1",
           "protected_reason": null,
           "triangles_before": 384,
-          "triangles_after": 80,
-          "vertices": 43,
+          "triangles_after": 76,
+          "vertices": 41,
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 2,
@@ -2938,35 +2194,11 @@
           "name": "Sleeve_r_hem_2",
           "protected_reason": null,
           "triangles_before": 384,
-          "triangles_after": 80,
-          "vertices": 43,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Sleeve_r_hem_3",
-          "protected_reason": null,
-          "triangles_before": 384,
           "triangles_after": 76,
           "vertices": 41,
           "morphs": [],
           "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Sleeve_r_pearl_embroidery",
-          "protected_reason": null,
-          "triangles_before": 864,
-          "triangles_after": 172,
-          "vertices": 226,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
+          "max_influences": 3,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
@@ -2984,18 +2216,6 @@
         },
         {
           "name": "Sleeve_r_tier_2",
-          "protected_reason": null,
-          "triangles_before": 2176,
-          "triangles_after": 434,
-          "vertices": 217,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 4,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "Sleeve_r_tier_3",
           "protected_reason": null,
           "triangles_before": 2176,
           "triangles_after": 434,
@@ -3171,42 +2391,6 @@
           "morphs": [],
           "invalid_vertices": 0,
           "max_influences": 1,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "White_five_petal_waist_blossoms",
-          "protected_reason": null,
-          "triangles_before": 800,
-          "triangles_after": 160,
-          "vertices": 210,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 2,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "White_sash_reverse_l",
-          "protected_reason": null,
-          "triangles_before": 776,
-          "triangles_after": 154,
-          "vertices": 79,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
-          "vertices_trimmed_to_four": 0,
-          "vertices_repaired_to_root": 0
-        },
-        {
-          "name": "White_sash_reverse_r",
-          "protected_reason": null,
-          "triangles_before": 776,
-          "triangles_after": 154,
-          "vertices": 79,
-          "morphs": [],
-          "invalid_vertices": 0,
-          "max_influences": 3,
           "vertices_trimmed_to_four": 0,
           "vertices_repaired_to_root": 0
         },
@@ -3439,21 +2623,21 @@
           "vertices_repaired_to_root": 0
         }
       ],
-      "triangles_base": 66727,
-      "triangles_winged": 77631,
-      "actual_ratio_base": 0.37070555555555557,
-      "actual_ratio_winged": 0.33346649484536084,
+      "triangles_base": 58097,
+      "triangles_winged": 69001,
+      "actual_ratio_base": 0.4093644306651635,
+      "actual_ratio_winged": 0.3543601068200493,
       "invalid_vertices": 0,
-      "protected_meshes": 36,
+      "protected_meshes": 32,
       "max_influences": 4,
       "files": [
         {
           "name": "Yuan_Base_LOD2.fbx",
-          "bytes": 14426268
+          "bytes": 11108988
         },
         {
           "name": "Yuan_Winged_LOD2.fbx",
-          "bytes": 15676828
+          "bytes": 12369116
         }
       ]
     }

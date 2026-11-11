@@ -1,5 +1,6 @@
-"""Yuan's layered silk hanfu, built in metres for skeletal FBX export.
-Each garment is a real mesh with UVs and deform weights. Embroidery is geometry.
+"""Yuan's plain everyday layers, built in metres for skeletal FBX export.
+Canonical text takes precedence over ornamental reference-image details.
+All garments are real UV-mapped meshes with deform weights; no jewelry or floral embroidery.
 """
 import bpy, math, bmesh
 from mathutils import Vector
@@ -82,83 +83,40 @@ def line(name,pts,radius,material,wfn):
         rows.append([tuple(p+radius*(cos(j*2*pi/6)*a+sin(j*2*pi/6)*b)) for j in range(6)])
     return grid(name,rows,material,wfn,True)
 
-class Detail:
-    def __init__(self):self.v=[];self.f=[];self.w=[]
-    def petal(self,center,length,width,angle,y_sign=-1,wfn=clothweights):
-        # Slightly convex pointed petal in XZ, stitched into the cloth.
-        c=Vector(center);d=Vector((sin(angle),0,cos(angle)));ac=Vector((cos(angle),0,-sin(angle)))
-        off=len(self.v);rows=6;cols=5
-        self.v.append(tuple(c));self.w.append(wfn(c))
-        for i in range(1,rows-1):
-            t=i/(rows-1);wid=width*sin(pi*t)**.8
-            for j in range(cols):
-                u=2*j/(cols-1)-1
-                p=c+d*(t*length)+ac*(wid*u)
-                p.y+=y_sign*.0014*sin(pi*t)*(1-u*u)
-                self.v.append(tuple(p));self.w.append(wfn(p))
-        for j in range(cols-1):self.f.append((off,off+1+j+1,off+1+j))
-        for i in range(rows-3):
-            for j in range(cols-1):
-                a=off+1+i*cols+j;self.f.append((a,a+1,a+1+cols,a+cols))
-        tip=len(self.v);p=c+d*length;self.v.append(tuple(p));self.w.append(wfn(p))
-        last=off+1+(rows-3)*cols
-        for j in range(cols-1):self.f.append((last+j,last+j+1,tip))
-    def flower(self,center,size,wfn=clothweights,petals=5,y_sign=-1):
-        for i in range(petals):self.petal(center,size,size*.23,i*2*pi/petals+.12,y_sign,wfn)
-    def finish(self,name,material):return mesh(name,self.v,self.f,material,self.w)
-
 def build():
     global COLL,CREATED
     CREATED=[];COLL=bpy.data.collections.new('04 · Layered silk garments');bpy.context.scene.collection.children.link(COLL)
-    silk=mat('Silk • pearl ivory',(.82,.835,.88),.4)
-    under=mat('Silk • cool underlayer',(.70,.725,.79),.5)
-    edge=mat('Silk • folded ivory edging',(.94,.95,.98),.36)
-    thread=mat('Embroidery • raised pearl thread',(.91,.92,.955),.48)
+    silk=mat('Silk • plain soft ivory',(.82,.835,.88),.62)
+    under=mat('Silk • plain cool underlayer',(.75,.775,.82),.66)
+    edge=mat('Silk • simple folded hem',(.87,.885,.92),.60)
     charcoal=mat('Sash • graphite woven silk',(.015,.018,.024),.48)
-    trim=mat('Sash • subtle edge stitching',(.095,.105,.12),.45)
-    silver=mat('Flower centre • pale gold',(.61,.53,.33),.32,.45)
 
-    # One finely pleated continuous ankle-length underskirt.
+    # Continuous ankle-length underskirt with shallow, soft folds.
     rows=[]
     for i in range(29):
         t=i/28;z=1.105-.985*t;rx=.119+.185*t**.77;ry=.081+.145*t**.85
         row=[]
         for j in range(84):
-            a=j*2*pi/84;pleat=1+.027*sin(28*a+.1*t)+.012*cos(56*a)
-            row.append((rx*sin(a)*pleat,-ry*cos(a)*pleat,z+.0025*t*t*cos(28*a)))
+            a=j*2*pi/84;pleat=1+.018*sin(16*a+.22*t)+.004*cos(32*a+.1*t)
+            row.append((rx*sin(a)*pleat,-ry*cos(a)*pleat,z+.002*t*t*cos(16*a)))
         rows.append(row)
-    grid('Silk_underskirt_28_soft_pleats',rows,under,clothweights,True,.0012)
-    # Four petal-like overlapping outer skirts. The hems descend to pointed scallops.
-    for layer,(ztop,zbot,extra) in enumerate([(1.095,.32,.016),(1.095,.51,.023),(1.095,.71,.030)]):
-        rows=[]
-        for i in range(17):
-            t=i/16;row=[]
-            for j in range(84):
-                a=2*pi*j/84
-                # Handkerchief hem points front, back, and sides.
-                zb=zbot+.115*(.5-.5*cos(4*a))
-                z=ztop*(1-t)+zb*t
-                d=(1.105-z)/.985
-                rx=.119+.185*d**.77+extra*t;ry=.081+.145*d**.85+extra*.65*t
-                fl=1+.022*sin(28*a+.1*d)
-                row.append((rx*sin(a)*fl,-ry*cos(a)*fl,z))
-            rows.append(row)
-        grid(f'Outer_skirt_layer_{layer+1:02}',rows,silk,clothweights,True,.001)
-        line(f'Rolled_hem_skirt_{layer+1:02}',rows[-1]+[rows[-1][0]],.0009,edge,clothweights)
-    # Centre ornamental stole panels, with pointed hems and subtle ripples.
-    for back in (False,True):
-        sign=1 if back else -1
-        rows=[]
-        for i in range(35):
-            t=i/34;row=[]
-            for j in range(9):
-                u=j/8*2-1;zb=.19+.048*abs(u);z=1.09*(1-t)+zb*t
-                d=(1.105-z)/.985;w=.034+.007*t
-                y=sign*(.081+.145*d**.85+.027+.0012*cos(2*pi*u))
-                row.append((u*w,y,z))
-            rows.append(row)
-        grid(('Back' if back else 'Front')+'_embroidered_stole',rows,silk,clothweights,False,.0012)
-        for index in (0,-1):line(('Back' if back else 'Front')+f'_stole_piping_{index}',[r[index] for r in rows],.00065,edge,clothweights)
+    grid('Silk_plain_underskirt_soft_folds',rows,under,clothweights,True,.0012)
+    # One unadorned outer robe layer over the long underlayer. Its subtly
+    # asymmetric hem reads as overlapping soft cloth, not ornamental scallops.
+    rows=[]
+    for i in range(25):
+        t=i/24;row=[]
+        for j in range(84):
+            a=2*pi*j/84
+            zb=.205+.045*(.5-.5*cos(a+.3))
+            z=1.095*(1-t)+zb*t;d=(1.105-z)/.985
+            rx=.119+.185*d**.77+.012*t
+            ry=.081+.145*d**.85+.009*t
+            fl=1+.012*sin(16*a+.15*d)+.004*sin(7*a-.4*d)
+            row.append((rx*sin(a)*fl,-ry*cos(a)*fl,z))
+        rows.append(row)
+    grid('Plain_outer_robe_layer',rows,silk,clothweights,True,.001)
+    line('Simple_rolled_outer_hem',rows[-1]+[rows[-1][0]],.0007,edge,clothweights)
     # Torso follows body while retaining an open neckline.
     profiles=[(1.105,.124,.086),(1.16,.128,.09),(1.24,.153,.096),(1.31,.161,.088),(1.35,.176,.075),(1.385,.121,.063),(1.425,.045,.045)]
     rows=[]
@@ -178,11 +136,11 @@ def build():
             rows.append([tuple(p+across*(width*(j/4-.5))+Vector((0,-offset,0))) for j in range(5)])
         grid(name,rows,material,lambda p:torsoweights(p[2]),False,.0012)
         return rows
-    collar('Black_inner_lapel_R',[(-.041,-.043,1.43),(-.026,-.077,1.39),(.038,-.101,1.295)],.018,charcoal,.004)
-    collar('Black_inner_lapel_L',[(.041,-.043,1.43),(.023,-.079,1.384),(-.063,-.103,1.24)],.018,charcoal,.006)
-    collar('Pearl_cross_lapel_under',[(-.063,-.055,1.414),(-.040,-.097,1.35),(.070,-.108,1.17)],.040,edge,.003)
-    co=collar('Pearl_cross_lapel_over',[(.065,-.055,1.414),(.044,-.100,1.346),(-.069,-.111,1.148)],.043,silk,.005)
-    for idx in (0,-1):line('Lapel_rolled_edge_'+str(idx),[r[idx] for r in co],.0008,thread,lambda p:torsoweights(p[2]))
+    collar('Black_inner_lapel_R',[(-.041,-.043,1.43),(-.026,-.077,1.39),(.038,-.101,1.295)],.010,charcoal,.004)
+    collar('Black_inner_lapel_L',[(.041,-.043,1.43),(.023,-.079,1.384),(-.063,-.103,1.24)],.010,charcoal,.006)
+    collar('Pearl_cross_lapel_under',[(-.063,-.055,1.414),(-.040,-.097,1.35),(.070,-.108,1.17)],.034,edge,.003)
+    co=collar('Pearl_cross_lapel_over',[(.065,-.055,1.414),(.044,-.100,1.346),(-.069,-.111,1.148)],.035,silk,.005)
+    for idx in (0,-1):line('Lapel_rolled_edge_'+str(idx),[r[idx] for r in co],.0006,edge,lambda p:torsoweights(p[2]))
 
     # Fitted shoulder yokes bridge the bodice and upper sleeve. The arm-root
     # circle rises above the sleeve opening; these cloth caps cover that join.
@@ -202,7 +160,7 @@ def build():
             return {'clavicle_'+side:1-a,'upperarm_'+side:a}
         grid('Fitted_silk_shoulder_yoke_'+side,rows,silk,shoulder_weights,True,.0012)
 
-    # Relaxed A-pose sleeves with bell cuffs; two overlapping hanging flounces.
+    # Relaxed A-pose sleeves: one plain bell sleeve and a short outer layer.
     for side,sgn in [('l',1),('r',-1)]:
         def sw(p,side=side,sgn=sgn):
             z=p[2];x=abs(p[0]);under=(x-.17)*(-2.05)+1.35
@@ -214,7 +172,7 @@ def build():
             w=sw(p);bad='sleeve_'+side+'_03'
             if bad in w:w['sleeve_'+side+'_02']=w.get('sleeve_'+side+'_02',0)+w.pop(bad)
             return w
-        for layer,end in enumerate([1.0,.79,.58]):
+        for layer,end in enumerate([1.0,.80]):
             rows=[]
             for i in range(17):
                 t=i/16*end;x=sgn*(.163+.202*t);z=1.352-.421*t;y=-.006*t
@@ -222,83 +180,34 @@ def build():
                 for j in range(32):
                     a=j*2*pi/32
                     # Perpendicular in XZ gives volume; lower side is generously draped.
-                    r=.043+.002*layer+(.065+.016*layer)*t**1.4
-                    drape=.12*t**1.5*(.5+.5*cos(a))
+                    r=.043+.002*layer+(.050+.012*layer)*t**1.4
+                    drape=.095*t**1.5*(.5+.5*cos(a))
                     xoff=sgn*cos(a)*r*.90;zoff=cos(a)*r*.43-drape
                     yy=y+sin(a)*(.054+.003*layer+.055*t)+.003*sin(12*a)*t
-                    # Layer hems have a softly pointed underside.
-                    zz=z+zoff-(t/end)**6*.026*(.5+.5*cos(2*a))
+                    # A gently hanging cuff, without pointed ornamental flounces.
+                    zz=z+zoff-(t/end)**6*.010*(.5+.5*cos(a))
                     row.append((x+xoff,yy,zz))
                 rows.append(row)
             grid(f'Sleeve_{side}_tier_{layer+1}',rows,silk if layer else under,sw2,True,.0012)
             line(f'Sleeve_{side}_hem_{layer+1}',rows[-1]+[rows[-1][0]],.001,edge,sw2)
-        # Embroidery sprays on visible front shoulder/cuff surface.
-        d=Detail()
-        for k,(x,z,size) in enumerate([(.205,1.235,.019),(.270,1.09,.021),(.330,.95,.017)]):
-            yy=-.063-(1.35-z)*.09
-            d.flower((sgn*x,yy,z),size,sw2,7)
-            for h in range(2):
-                d.petal((sgn*(x+.010),yy,z-.018-h*.019),.018,.003,sgn*1.1,-1,sw2)
-        d.finish(f'Sleeve_{side}_pearl_embroidery',thread)
-
-    # Sculpted wide black obi, upper/lower seam and silver waist cord.
+    # Plain, restrained black cloth belt; no cord, flowers, metal or jewelry.
     rows=[]
-    for z in [1.063,1.067,1.097,1.130,1.134]:
-        rx=.130+(.003 if z in (1.063,1.134) else 0);ry=.098
+    for z in [1.075,1.078,1.097,1.117,1.120]:
+        rx=.130+(.0015 if z in (1.075,1.120) else 0);ry=.098
         rows.append([(rx*sin(j*2*pi/80),-ry*cos(j*2*pi/80),z) for j in range(80)])
-    grid('Graphite_wide_obi',rows,charcoal,lambda p:{'spine_01':1},True,.002)
-    for z in (1.069,1.128):
-        line('Obi_seam_'+str(z),[(.132*sin(j*2*pi/80),-.100*cos(j*2*pi/80),z) for j in range(81)],.0009,trim,lambda p:{'spine_01':1})
-    line('Ivory_waist_cord',[(.133*sin(j*2*pi/96),-.102*cos(j*2*pi/96),1.098) for j in range(97)],.0021,edge,lambda p:{'spine_01':1})
+    grid('Plain_black_cloth_belt',rows,charcoal,lambda p:{'spine_01':1},True,.0015)
+    # Two short tie ends retain a trace of the reference silhouette without
+    # the original long ceremonial streamers or contrasting lining.
     for side,sgn in [('l',1),('r',-1)]:
-        length=.78 if side=='r' else .65;rows=[]
-        for i in range(39):
-            t=i/38;row=[]
+        length=.30 if side=='r' else .25;rows=[]
+        for i in range(21):
+            t=i/20;row=[]
             for j in range(5):
-                u=j/4*2-1;x=sgn*(.076+.013*t)+u*.0155
-                z=1.091-length*t;d=(1.105-z)/.985;y=-.112-.145*d**.85-.003*sin(t*3*pi)-.0007*u*u
+                u=j/4*2-1;x=sgn*(.053+.010*t)+u*.010
+                z=1.091-length*t;d=(1.105-z)/.985
+                y=-.108-.145*d**.85-.002*sin(t*2*pi)-.0005*u*u
                 row.append((x,y,z))
             rows.append(row)
         wfn=lambda p,side=side:blend_chain('belt_'+side+'_',p[2],1.10,.30)
-        grid('Long_black_sash_'+side,rows,charcoal,wfn,False,.0015)
-        for idx in (0,-1):line('Black_sash_edge_'+side+str(idx),[r[idx] for r in rows],.00065,trim,wfn)
-        # White reverse tail visible beneath black sash, offset by a few millimetres.
-        lining=[[tuple(Vector(p)+Vector((sgn*.005,.003,-.025))) for p in r] for r in rows]
-        grid('White_sash_reverse_'+side,lining,edge,wfn,False,.0008)
-    rows=[]
-    for i in range(25):
-        t=i/24;z=1.09-.41*t;d=(1.105-z)/.985
-        rows.append([(u*.016,.106+.145*d**.85,z) for u in [-1,-.5,0,.5,1]])
-    grid('Short_rear_black_sash',rows,charcoal,clothweights,False,.0015)
-
-    # Low-relief floral vines on front/back decorative stole and skirt panels.
-    details=Detail()
-    for sign in (-1,1):
-        for z in [.95,.82,.69,.56,.43,.30]:
-            d=(1.105-z)/.985;y=sign*(.081+.145*d**.85+.030)
-            details.flower((0,y,z),.022,clothweights,7,sign)
-            for s in (-1,1):
-                details.petal((s*.004,y,z-.028),.018,.004,s*.62,sign,clothweights)
-                details.petal((s*.003,y,z-.045),.019,.004,s*.9,sign,clothweights)
-        for s in (-1,1):
-            for z in (.84,.64,.46):
-                d=(1.105-z)/.985;rx=.119+.185*d**.77+.029;ry=.081+.145*d**.85+.020
-                a=.65;details.flower((s*rx*sin(a),sign*(ry*cos(a)+.008),z),.023,clothweights,7,sign)
-    details.finish('Pearl_floral_vines_on_silk',thread)
-    # Five-petal waist ornaments and pendant with individual convex leaves.
-    flowers=Detail();centers=[]
-    for x,z,size in [(-.079,1.098,.023),(0,1.098,.015),(.079,1.098,.023),(.083,.875,.014)]:
-        y=-.112 if z>1.05 else -.173
-        wf=(lambda p:{'spine_01':1}) if z>1.05 else (lambda p:blend_chain('belt_l_',p[2],1.10,.30))
-        flowers.flower((x,y,z),size,wf,5)
-        centers.append(((x,y-.0015,z),wf))
-    flowers.flower((0,.116,1.09),.023,lambda p:{'spine_01':1},5,1)
-    flowers.finish('White_five_petal_waist_blossoms',edge)
-    v=[];f=[];w=[]
-    for c,wf in centers:
-        off=len(v);v.append(c);w.append(wf(c))
-        for j in range(16):
-            p=(c[0]+.0027*cos(j*2*pi/16),c[1]-.001,c[2]+.0027*sin(j*2*pi/16));v.append(p);w.append(wf(p))
-        for j in range(16):f.append((off,off+1+j,off+1+(j+1)%16))
-    mesh('Blossom_pale_gold_centres',v,f,silver,w)
+        grid('Short_plain_belt_tie_'+side,rows,charcoal,wfn,False,.0012)
     return list(CREATED)

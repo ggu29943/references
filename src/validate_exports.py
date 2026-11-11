@@ -3,7 +3,10 @@ import bpy,json,sys,math
 from mathutils import Vector
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-paths=sorted((ROOT/'output').glob('Yuan_*.fbx'))
+expected=['Yuan_Base.fbx','Yuan_Winged.fbx','Yuan_Wings_Fold.fbx']+[f'Yuan_{kind}{level}.fbx' for kind in ['Base','Winged','Wings_Only'] for level in (['','_LOD1','_LOD2'] if kind=='Wings_Only' else ['_LOD1','_LOD2'])]
+paths=[ROOT/'output'/name for name in sorted(expected)]
+for path in paths:
+    if not path.is_file():raise FileNotFoundError(path)
 results=[]
 for path in paths:
     bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -41,7 +44,13 @@ for path in paths:
     r['animation_max_vertex_displacement_m']=max(dis,default=0)
     r['animation_moving_vertices']=sum(d>1e-6 for d in dis)
     r['nonfinite_evaluated']=sum(not all(math.isfinite(v) for v in p) for p in b)
-    r['pass']=len(rigs)==1 and not any([r['weights']['unweighted'],r['weights']['nonnormalized'],r['weights']['over4'],r['weights']['unknown_bones'],r['uv_missing'],r['nonfinite_evaluated']]) and 1.6<r['height_m']<2.0 and r['animation_moving_vertices']>0
+    r['pass']=len(rigs)==1 and not any([r['weights']['unweighted'],r['weights']['nonnormalized'],r['weights']['over4'],r['weights']['unknown_bones'],r['uv_missing'],r['nonfinite_evaluated']]) and ('Wings_Only' in path.name or abs(r['height_m']-1.70)<.004) and r['animation_moving_vertices']>0
+    if 'Wing' in path.name:
+        r['wingspan_m']=r['world_bounds_m']['0'][1]-r['world_bounds_m']['0'][0]
+        r['pass']=r['pass'] and abs(r['wingspan_m']-6)<.02
+    if path.stem=='Yuan_Wings_Fold':
+        r['animated_folded_span_m']=max(p[0] for p in b)-min(p[0] for p in b)
+        r['pass']=r['pass'] and r['animated_folded_span_m']<3.5
     results.append(r)
 print('FBX_VALIDATION_JSON_BEGIN')
 print(json.dumps(results,indent=2))

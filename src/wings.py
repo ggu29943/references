@@ -10,6 +10,13 @@ import bpy
 from mathutils import Vector
 from common import material, collection
 
+def _wing_map(p):
+    x,y,z=p
+    sg=1 if x>=0 else -1
+    return (sg*(.10+(abs(x)-.10)*2.6880733945), .18+(y-.10)*1.7, 1.33+(z-1.33)*1.4)
+
+BONE_POINTS={side:[_wing_map((sg*x,y,z)) for x,y,z in [(.10,.10,1.33),(.44,.10,1.48),(.76,.10,1.44),(1.05,.10,1.18)]] for side,sg in [('l',1),('r',-1)]}
+
 
 class Geometry:
     def __init__(self):
@@ -44,7 +51,7 @@ class Geometry:
 
     def object(self,name,mat):
         data=bpy.data.meshes.new(name+'Mesh')
-        data.from_pydata(self.vertices,[],self.faces)
+        data.from_pydata([_wing_map(p) for p in self.vertices],[],self.faces)
         data.materials.append(mat)
         data.update()
         obj=bpy.data.objects.new(name,data)
@@ -129,11 +136,11 @@ def _feather(vanes,rachis,barbs,root,tip,width,weights,side_sign,seed,rows=9,det
 def build():
     """Build mesh objects in an optional collection named Wings."""
     collection('Wings')
-    ivory=material('Wing • porcelain feather',(0.88,.90,.98,1),roughness=.49)
-    pearl=material('Wing • pearl coverts',(.94,.955,1,1),roughness=.43)
-    soft=material('Wing • soft feather shade',(.78,.81,.90,1),roughness=.58)
-    shaftmat=material('Wing • satin rachis',(.95,.96,1,1),roughness=.37)
-    barbmat=material('Wing • fine vane ridges',(.86,.88,.95,1),roughness=.57)
+    ivory=material('Wing • porcelain feather',(.94,.94,.94,1),roughness=.49)
+    pearl=material('Wing • pearl coverts',(.94,.94,.94,1),roughness=.43)
+    soft=material('Wing • soft feather shade',(.94,.94,.94,1),roughness=.58)
+    shaftmat=material('Wing • satin rachis',(.94,.94,.94,1),roughness=.37)
+    barbmat=material('Wing • fine vane ridges',(.94,.94,.94,1),roughness=.57)
     out=[]
     for side,sgn in [('l',1),('r',-1)]:
         primary=Geometry(); secondary=Geometry(); coverts=Geometry(); shafts=Geometry(); barbs=Geometry()

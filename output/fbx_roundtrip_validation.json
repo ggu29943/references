@@ -2,32 +2,12 @@
   {
     "file": "Yuan_Base.fbx",
     "armatures": 1,
-    "meshes": 127,
+    "meshes": 94,
     "bones": [
       90
     ],
     "shape_keys": {
-      "Eye highlight l1": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Lower lid r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Outer lash flick l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Eye highlight r0": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Outer lash flick r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Eye highlight r1": [
+      "Upper lash r": [
         "Basis",
         "Blink_R"
       ],
@@ -35,31 +15,15 @@
         "Basis",
         "Blink_L"
       ],
-      "Eye white l": [
-        "Basis",
-        "Blink_L"
-      ],
       "Iris r": [
         "Basis",
         "Blink_R"
       ],
+      "Eye white l": [
+        "Basis",
+        "Blink_L"
+      ],
       "Eye white r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Upper eyelid l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Upper eyelid r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Upper lash l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Upper lash r": [
         "Basis",
         "Blink_R"
       ],
@@ -67,15 +31,35 @@
         "Basis",
         "Blink_L"
       ],
+      "Outer lash flick l": [
+        "Basis",
+        "Blink_L"
+      ],
       "Lower eyelid r": [
         "Basis",
         "Blink_R"
       ],
-      "Eye highlight l0": [
+      "Outer lash flick r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Upper eyelid l": [
         "Basis",
         "Blink_L"
       ],
       "Lower lid l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Upper eyelid r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Lower lid r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Upper lash l": [
         "Basis",
         "Blink_L"
       ]
@@ -206,42 +190,6 @@
         "max_keyframes": 121
       },
       {
-        "name": "Key.014|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.015|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.016|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.017|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
         "name": "Key|Scene",
         "frame_range": [
           2.0,
@@ -262,19 +210,19 @@
     ],
     "world_bounds_m": {
       "0": [
-        -0.4630632996559143,
-        0.46306324005126953
+        -0.44485825300216675,
+        0.44485825300216675
       ],
       "1": [
-        -0.24598832428455353,
-        0.24598832428455353
+        -0.22685235738754272,
+        0.22685237228870392
       ],
       "2": [
-        -5.058432250848455e-08,
-        1.7179827690124512
+        3.27939311262071e-08,
+        1.6999998092651367
       ]
     },
-    "height_m": 1.7179828195967737,
+    "height_m": 1.6999997764712056,
     "armature_transform": {
       "scale": [
         1.0,
@@ -290,24 +238,56 @@
         "root"
       ]
     },
-    "animation_max_vertex_displacement_m": 0.007559634665782482,
-    "animation_moving_vertices": 61158,
+    "animation_max_vertex_displacement_m": 0.007927198005441345,
+    "animation_moving_vertices": 56942,
     "nonfinite_evaluated": 0,
     "pass": true
   },
   {
     "file": "Yuan_Base_LOD1.fbx",
     "armatures": 1,
-    "meshes": 127,
+    "meshes": 94,
     "bones": [
       90
     ],
     "shape_keys": {
+      "Eye white l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Upper lash l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Upper lash r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Eye white r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Outer lash flick l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Lower eyelid l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Outer lash flick r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Lower lid r": [
+        "Basis",
+        "Blink_R"
+      ],
       "Iris l": [
         "Basis",
         "Blink_L"
       ],
-      "Eye white r": [
+      "Lower eyelid r": [
         "Basis",
         "Blink_R"
       ],
@@ -319,59 +299,11 @@
         "Basis",
         "Blink_L"
       ],
-      "Eye white l": [
-        "Basis",
-        "Blink_L"
-      ],
       "Iris r": [
         "Basis",
         "Blink_R"
       ],
-      "Lower lid r": [
-        "Basis",
-        "Blink_R"
-      ],
       "Upper eyelid r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Eye highlight r1": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Lower eyelid r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Upper lash l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Eye highlight r0": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Lower eyelid l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Upper lash r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Eye highlight l1": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Eye highlight l0": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Outer lash flick l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Outer lash flick r": [
         "Basis",
         "Blink_R"
       ]
@@ -502,42 +434,6 @@
         "max_keyframes": 121
       },
       {
-        "name": "Key.014|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.015|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.016|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.017|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
         "name": "Key|Scene",
         "frame_range": [
           2.0,
@@ -558,19 +454,19 @@
     ],
     "world_bounds_m": {
       "0": [
-        -0.4632791578769684,
-        0.4627552330493927
+        -0.4445440471172333,
+        0.4445440471172333
       ],
       "1": [
-        -0.24598832428455353,
-        0.24598832428455353
+        -0.2268567830324173,
+        0.2268567979335785
       ],
       "2": [
-        -1.795553180272691e-05,
-        1.7179834842681885
+        -1.768469883245416e-05,
+        1.700000524520874
       ]
     },
-    "height_m": 1.7180014397999912,
+    "height_m": 1.7000182092197065,
     "armature_transform": {
       "scale": [
         1.0,
@@ -586,24 +482,20 @@
         "root"
       ]
     },
-    "animation_max_vertex_displacement_m": 0.007559433746504846,
-    "animation_moving_vertices": 38609,
+    "animation_max_vertex_displacement_m": 0.007927915729571161,
+    "animation_moving_vertices": 36287,
     "nonfinite_evaluated": 0,
     "pass": true
   },
   {
     "file": "Yuan_Base_LOD2.fbx",
     "armatures": 1,
-    "meshes": 127,
+    "meshes": 94,
     "bones": [
       90
     ],
     "shape_keys": {
-      "Eye highlight l1": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Lower lid r": [
+      "Outer lash flick r": [
         "Basis",
         "Blink_R"
       ],
@@ -611,45 +503,13 @@
         "Basis",
         "Blink_L"
       ],
-      "Upper eyelid r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Upper lash l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Upper lash r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Eye white l": [
+      "Iris l": [
         "Basis",
         "Blink_L"
       ],
       "Iris r": [
         "Basis",
         "Blink_R"
-      ],
-      "Eye white r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Iris l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Eye highlight r1": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Eye highlight l0": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Lower lid l": [
-        "Basis",
-        "Blink_L"
       ],
       "Lower eyelid r": [
         "Basis",
@@ -659,15 +519,35 @@
         "Basis",
         "Blink_L"
       ],
+      "Eye white l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Lower lid l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Upper lash r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Eye white r": [
+        "Basis",
+        "Blink_R"
+      ],
       "Outer lash flick l": [
         "Basis",
         "Blink_L"
       ],
-      "Eye highlight r0": [
+      "Lower lid r": [
         "Basis",
         "Blink_R"
       ],
-      "Outer lash flick r": [
+      "Upper lash l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Upper eyelid r": [
         "Basis",
         "Blink_R"
       ]
@@ -798,42 +678,6 @@
         "max_keyframes": 121
       },
       {
-        "name": "Key.014|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.015|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.016|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.017|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
         "name": "Key|Scene",
         "frame_range": [
           2.0,
@@ -854,19 +698,19 @@
     ],
     "world_bounds_m": {
       "0": [
-        -0.4667050838470459,
-        0.46697041392326355
+        -0.4480906128883362,
+        0.4478116035461426
       ],
       "1": [
-        -0.24602235853672028,
-        0.24599714577198029
+        -0.22692671418190002,
+        0.22692672908306122
       ],
       "2": [
-        -7.026793173281476e-05,
-        1.7181836366653442
+        -6.944948108866811e-05,
+        1.7001984119415283
       ]
     },
-    "height_m": 1.718253904597077,
+    "height_m": 1.700267861422617,
     "armature_transform": {
       "scale": [
         1.0,
@@ -882,26 +726,54 @@
         "root"
       ]
     },
-    "animation_max_vertex_displacement_m": 0.007556359797745037,
-    "animation_moving_vertices": 28350,
+    "animation_max_vertex_displacement_m": 0.007926925658247123,
+    "animation_moving_vertices": 26917,
     "nonfinite_evaluated": 0,
     "pass": true
   },
   {
     "file": "Yuan_Winged.fbx",
     "armatures": 1,
-    "meshes": 137,
+    "meshes": 104,
     "bones": [
       90
     ],
     "shape_keys": {
-      "Eye highlight r0": [
+      "Upper eyelid r": [
         "Basis",
         "Blink_R"
       ],
       "Lower lid l": [
         "Basis",
         "Blink_L"
+      ],
+      "Upper lash l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Upper lash r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Eye white r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Iris l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Eye white l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Lower eyelid l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Outer lash flick r": [
+        "Basis",
+        "Blink_R"
       ],
       "Lower eyelid r": [
         "Basis",
@@ -911,7 +783,7 @@
         "Basis",
         "Blink_L"
       ],
-      "Outer lash flick r": [
+      "Iris r": [
         "Basis",
         "Blink_R"
       ],
@@ -919,51 +791,7 @@
         "Basis",
         "Blink_R"
       ],
-      "Iris l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Lower eyelid l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Iris r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Eye highlight r1": [
-        "Basis",
-        "Blink_R"
-      ],
       "Upper eyelid l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Eye white l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Upper eyelid r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Eye white r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Upper lash l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Eye highlight l1": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Upper lash r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Eye highlight l0": [
         "Basis",
         "Blink_L"
       ]
@@ -1094,42 +922,6 @@
         "max_keyframes": 121
       },
       {
-        "name": "Key.014|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.015|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.016|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.017|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
         "name": "Key|Scene",
         "frame_range": [
           2.0,
@@ -1150,19 +942,19 @@
     ],
     "world_bounds_m": {
       "0": [
-        -1.190076470375061,
-        1.190076470375061
+        -3.0,
+        3.0
       ],
       "1": [
-        -0.24598832428455353,
-        0.24598832428455353
+        -0.22685235738754272,
+        0.37845879793167114
       ],
       "2": [
-        -5.058432250848455e-08,
-        1.7179827690124512
+        3.27939311262071e-08,
+        1.6999998092651367
       ]
     },
-    "height_m": 1.7179828195967737,
+    "height_m": 1.6999997764712056,
     "armature_transform": {
       "scale": [
         1.0,
@@ -1178,20 +970,21 @@
         "root"
       ]
     },
-    "animation_max_vertex_displacement_m": 0.020919123546238223,
-    "animation_moving_vertices": 90574,
+    "animation_max_vertex_displacement_m": 0.06789850697359334,
+    "animation_moving_vertices": 86358,
     "nonfinite_evaluated": 0,
-    "pass": true
+    "pass": true,
+    "wingspan_m": 6.0
   },
   {
     "file": "Yuan_Winged_LOD1.fbx",
     "armatures": 1,
-    "meshes": 137,
+    "meshes": 104,
     "bones": [
       90
     ],
     "shape_keys": {
-      "Eye white r": [
+      "Outer lash flick r": [
         "Basis",
         "Blink_R"
       ],
@@ -1199,7 +992,7 @@
         "Basis",
         "Blink_L"
       ],
-      "Eye highlight l1": [
+      "Eye white l": [
         "Basis",
         "Blink_L"
       ],
@@ -1207,13 +1000,25 @@
         "Basis",
         "Blink_L"
       ],
-      "Outer lash flick r": [
+      "Upper eyelid l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Iris l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Lower lid r": [
         "Basis",
         "Blink_R"
       ],
-      "Eye highlight r0": [
+      "Upper eyelid r": [
         "Basis",
         "Blink_R"
+      ],
+      "Upper lash l": [
+        "Basis",
+        "Blink_L"
       ],
       "Iris r": [
         "Basis",
@@ -1223,45 +1028,17 @@
         "Basis",
         "Blink_R"
       ],
-      "Iris l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Eye highlight l0": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Eye highlight r1": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Eye white l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Upper lash r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Upper lash l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Upper eyelid r": [
-        "Basis",
-        "Blink_R"
-      ],
-      "Upper eyelid l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Lower lid r": [
+      "Eye white r": [
         "Basis",
         "Blink_R"
       ],
       "Lower lid l": [
         "Basis",
         "Blink_L"
+      ],
+      "Upper lash r": [
+        "Basis",
+        "Blink_R"
       ]
     },
     "weights": {
@@ -1390,42 +1167,6 @@
         "max_keyframes": 121
       },
       {
-        "name": "Key.014|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.015|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.016|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.017|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
         "name": "Key|Scene",
         "frame_range": [
           2.0,
@@ -1446,19 +1187,19 @@
     ],
     "world_bounds_m": {
       "0": [
-        -1.1898642778396606,
-        1.1898764371871948
+        -2.9998040199279785,
+        2.9998040199279785
       ],
       "1": [
-        -0.24598832428455353,
-        0.24598832428455353
+        -0.2268567830324173,
+        0.37880051136016846
       ],
       "2": [
-        -1.795553180272691e-05,
-        1.7179834842681885
+        -1.768469883245416e-05,
+        1.700000524520874
       ]
     },
-    "height_m": 1.7180014397999912,
+    "height_m": 1.7000182092197065,
     "armature_transform": {
       "scale": [
         1.0,
@@ -1474,28 +1215,25 @@
         "root"
       ]
     },
-    "animation_max_vertex_displacement_m": 0.020916544653079912,
-    "animation_moving_vertices": 53499,
+    "animation_max_vertex_displacement_m": 0.06789397688672315,
+    "animation_moving_vertices": 51177,
     "nonfinite_evaluated": 0,
-    "pass": true
+    "pass": true,
+    "wingspan_m": 5.999608039855957
   },
   {
     "file": "Yuan_Winged_LOD2.fbx",
     "armatures": 1,
-    "meshes": 137,
+    "meshes": 104,
     "bones": [
       90
     ],
     "shape_keys": {
-      "Eye highlight l0": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Iris l": [
-        "Basis",
-        "Blink_L"
-      ],
       "Upper eyelid l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Lower eyelid l": [
         "Basis",
         "Blink_L"
       ],
@@ -1503,10 +1241,239 @@
         "Basis",
         "Blink_R"
       ],
-      "Eye highlight r1": [
+      "Outer lash flick r": [
         "Basis",
         "Blink_R"
       ],
+      "Upper lash l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Upper lash r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Outer lash flick l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Iris r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Iris l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Lower lid r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Lower lid l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Eye white r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Lower eyelid r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Eye white l": [
+        "Basis",
+        "Blink_L"
+      ]
+    },
+    "weights": {
+      "unweighted": 0,
+      "nonnormalized": 0,
+      "over4": 0,
+      "unknown_bones": []
+    },
+    "uv_missing": [],
+    "actions": [
+      {
+        "name": "Key.001|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.002|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.003|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.004|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.005|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.006|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.007|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.008|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.009|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.010|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.011|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.012|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key.013|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Key|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 1,
+        "max_keyframes": 121
+      },
+      {
+        "name": "Yuan_Rig|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 909,
+        "max_keyframes": 121
+      }
+    ],
+    "world_bounds_m": {
+      "0": [
+        -2.999521493911743,
+        2.999664545059204
+      ],
+      "1": [
+        -0.22692671418190002,
+        0.3780716359615326
+      ],
+      "2": [
+        -6.944948108866811e-05,
+        1.7001984119415283
+      ]
+    },
+    "height_m": 1.700267861422617,
+    "armature_transform": {
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        8.742277657347586e-08
+      ],
+      "root_names": [
+        "root"
+      ]
+    },
+    "animation_max_vertex_displacement_m": 0.06788656333372994,
+    "animation_moving_vertices": 35385,
+    "nonfinite_evaluated": 0,
+    "pass": true,
+    "wingspan_m": 5.999186038970947
+  },
+  {
+    "file": "Yuan_Wings_Fold.fbx",
+    "armatures": 1,
+    "meshes": 104,
+    "bones": [
+      90
+    ],
+    "shape_keys": {
       "Upper lash l": [
         "Basis",
         "Blink_L"
@@ -1519,7 +1486,11 @@
         "Basis",
         "Blink_R"
       ],
-      "Lower lid r": [
+      "Outer lash flick r": [
+        "Basis",
+        "Blink_R"
+      ],
+      "Lower eyelid r": [
         "Basis",
         "Blink_R"
       ],
@@ -1531,19 +1502,11 @@
         "Basis",
         "Blink_R"
       ],
-      "Lower eyelid r": [
-        "Basis",
-        "Blink_R"
-      ],
       "Lower eyelid l": [
         "Basis",
         "Blink_L"
       ],
-      "Outer lash flick l": [
-        "Basis",
-        "Blink_L"
-      ],
-      "Outer lash flick r": [
+      "Lower lid r": [
         "Basis",
         "Blink_R"
       ],
@@ -1551,11 +1514,19 @@
         "Basis",
         "Blink_L"
       ],
-      "Eye highlight l1": [
+      "Iris l": [
         "Basis",
         "Blink_L"
       ],
-      "Eye highlight r0": [
+      "Outer lash flick l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Upper eyelid l": [
+        "Basis",
+        "Blink_L"
+      ],
+      "Upper eyelid r": [
         "Basis",
         "Blink_R"
       ]
@@ -1686,42 +1657,6 @@
         "max_keyframes": 121
       },
       {
-        "name": "Key.014|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.015|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.016|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
-        "name": "Key.017|Scene",
-        "frame_range": [
-          2.0,
-          122.0
-        ],
-        "fcurves": 1,
-        "max_keyframes": 121
-      },
-      {
         "name": "Key|Scene",
         "frame_range": [
           2.0,
@@ -1742,19 +1677,19 @@
     ],
     "world_bounds_m": {
       "0": [
-        -1.1898553371429443,
-        1.1899317502975464
+        -3.0,
+        3.0
       ],
       "1": [
-        -0.24602235853672028,
-        0.24599714577198029
+        -0.22685235738754272,
+        0.37845879793167114
       ],
       "2": [
-        -7.026793173281476e-05,
-        1.7181836366653442
+        3.27939311262071e-08,
+        1.6999998092651367
       ]
     },
-    "height_m": 1.718253904597077,
+    "height_m": 1.6999997764712056,
     "armature_transform": {
       "scale": [
         1.0,
@@ -1770,9 +1705,197 @@
         "root"
       ]
     },
-    "animation_max_vertex_displacement_m": 0.02091540894661868,
-    "animation_moving_vertices": 36818,
+    "animation_max_vertex_displacement_m": 2.9237971657774726,
+    "animation_moving_vertices": 29416,
     "nonfinite_evaluated": 0,
-    "pass": true
+    "pass": true,
+    "wingspan_m": 6.0,
+    "animated_folded_span_m": 0.8897181749343872
+  },
+  {
+    "file": "Yuan_Wings_Only.fbx",
+    "armatures": 1,
+    "meshes": 10,
+    "bones": [
+      90
+    ],
+    "shape_keys": {},
+    "weights": {
+      "unweighted": 0,
+      "nonnormalized": 0,
+      "over4": 0,
+      "unknown_bones": []
+    },
+    "uv_missing": [],
+    "actions": [
+      {
+        "name": "Yuan_Rig|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 909,
+        "max_keyframes": 121
+      }
+    ],
+    "world_bounds_m": {
+      "0": [
+        -3.0,
+        3.0
+      ],
+      "1": [
+        0.12553225457668304,
+        0.37845879793167114
+      ],
+      "2": [
+        0.596419095993042,
+        1.6006839275360107
+      ]
+    },
+    "height_m": 1.0042648315429688,
+    "armature_transform": {
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        8.742277657347586e-08
+      ],
+      "root_names": [
+        "root"
+      ]
+    },
+    "animation_max_vertex_displacement_m": 0.06789854769412149,
+    "animation_moving_vertices": 29416,
+    "nonfinite_evaluated": 0,
+    "pass": true,
+    "wingspan_m": 6.0
+  },
+  {
+    "file": "Yuan_Wings_Only_LOD1.fbx",
+    "armatures": 1,
+    "meshes": 10,
+    "bones": [
+      90
+    ],
+    "shape_keys": {},
+    "weights": {
+      "unweighted": 0,
+      "nonnormalized": 0,
+      "over4": 0,
+      "unknown_bones": []
+    },
+    "uv_missing": [],
+    "actions": [
+      {
+        "name": "Yuan_Rig|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 909,
+        "max_keyframes": 121
+      }
+    ],
+    "world_bounds_m": {
+      "0": [
+        -2.9998040199279785,
+        2.9998040199279785
+      ],
+      "1": [
+        0.1263865828514099,
+        0.37880051136016846
+      ],
+      "2": [
+        0.5964180827140808,
+        1.6006934642791748
+      ]
+    },
+    "height_m": 1.004275381565094,
+    "armature_transform": {
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        8.742277657347586e-08
+      ],
+      "root_names": [
+        "root"
+      ]
+    },
+    "animation_max_vertex_displacement_m": 0.06789397688672315,
+    "animation_moving_vertices": 14890,
+    "nonfinite_evaluated": 0,
+    "pass": true,
+    "wingspan_m": 5.999608039855957
+  },
+  {
+    "file": "Yuan_Wings_Only_LOD2.fbx",
+    "armatures": 1,
+    "meshes": 10,
+    "bones": [
+      90
+    ],
+    "shape_keys": {},
+    "weights": {
+      "unweighted": 0,
+      "nonnormalized": 0,
+      "over4": 0,
+      "unknown_bones": []
+    },
+    "uv_missing": [],
+    "actions": [
+      {
+        "name": "Yuan_Rig|Scene",
+        "frame_range": [
+          2.0,
+          122.0
+        ],
+        "fcurves": 909,
+        "max_keyframes": 121
+      }
+    ],
+    "world_bounds_m": {
+      "0": [
+        -2.999521493911743,
+        2.999664545059204
+      ],
+      "1": [
+        0.12714721262454987,
+        0.3780716359615326
+      ],
+      "2": [
+        0.5964754819869995,
+        1.6004894971847534
+      ]
+    },
+    "height_m": 1.004014015197754,
+    "armature_transform": {
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        8.742277657347586e-08
+      ],
+      "root_names": [
+        "root"
+      ]
+    },
+    "animation_max_vertex_displacement_m": 0.06788656333372994,
+    "animation_moving_vertices": 8468,
+    "nonfinite_evaluated": 0,
+    "pass": true,
+    "wingspan_m": 5.999186038970947
   }
 ]

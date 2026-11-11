@@ -1,0 +1,17 @@
+[
+  {
+    "file": "Yuan_Wings_Only.fbx",
+    "triangles": 52800,
+    "bones": 90
+  },
+  {
+    "file": "Yuan_Wings_Only_LOD1.fbx",
+    "triangles": 23748,
+    "bones": 90
+  },
+  {
+    "file": "Yuan_Wings_Only_LOD2.fbx",
+    "triangles": 10904,
+    "bones": 90
+  }
+]

@@ -1,47 +1,55 @@
-# 源 · Unreal 角色模型初版
+# 源 · 人物设定修订版 / Unreal 角色工程
 
-基于本对话提供的五张外貌参考制作的可编辑三维角色：银白长发、浅蓝眼睛、白色层叠长衣、黑色腰带与花饰，以及可选白色羽翼。
+按用户提供的[完整人物设定](docs/SOURCE_LORE.md)修订：成年约二十岁女性，170 cm，及腰白发，天蓝色无高光眼睛，素色柔软叠穿常服，展开约 6 m 的纯白双翼。制作解释与图文差异见 [建模依据](docs/CANON_MODEL_SPEC.md)。
 
-**当前是需要继续校对相似度的绑定初版，不是完成验收的精雕成品。** 用户提到的文字设定存于 ChatGPT 资料库，尚未提供到本对话，因此本仓库没有假定已读取它。比例与尺寸以图片为依据临时设定，身高约 1.72 米，等待正式设定核对。
+这是可编辑、已绑定的角色制作版本。脸部与发型相似度、完整面部绑定、贴图烘焙和 Unreal 实机效果仍需继续精修与验证。
 
-## 模型文件
+[普通形态](output/preview_front.png) · [面部](output/preview_portrait.png) · [展开羽翼](output/preview_winged.png) · [收拢羽翼](output/preview_folded.png) · [武器](output/preview_weapon.png) · [武器细节](output/preview_weapon_detail.png)
 
-- `output/Yuan_Character.blend`：Blender 4.3 源场景；包含参考图片、分部网格、材质、骨骼、摄影灯光。
-- `output/Yuan_Base.fbx`：普通形态，带基础人形与附属骨骼。
-- `output/Yuan_Winged.fbx`：带羽翼形态，使用相同骨架。
-- `output/Yuan_Winged.glb`：便于通用三维工具预览的版本。
-- `output/*LOD1.fbx`、`output/*LOD2.fbx`：自动减面版本，保留面部形态键网格；具体面数见验证报告。
-- `output/preview_*.png`：实际模型渲染，不是二维参考图冒充三维成果。
-- `output/validation.json`、`output/lod_validation.json` 与 `output/fbx_roundtrip_validation.json`：生成后的网格、面数和权重检查记录。
+![源的展开羽翼](output/preview_winged.png)
 
-[Unreal Engine 导入说明](docs/UNREAL_IMPORT.md) · [面部预览](output/preview_portrait.png) · [正面预览](output/preview_front.png) · [羽翼预览](output/preview_winged.png)
+## 模型与动作
 
-![模型预览](output/preview_winged.png)
+| 文件 | 内容 |
+| --- | --- |
+| `output/Yuan_Character.blend` | 可编辑源场景、参考图片、90 根骨骼、基础闭眼形态、材质和动作 |
+| `output/Yuan_Base.fbx` | 隐藏羽翼的常服角色，基础待机 |
+| `output/Yuan_Winged.fbx` | 含展开羽翼的完整角色，基础待机 |
+| `output/Yuan_Wings_Only.fbx` | 单独羽翼组件，共用角色骨架，便于 UE 运行时隐藏／显示 |
+| `output/Yuan_Wings_Fold.fbx` | 骨骼收拢—展开动作；不是通过缩放羽翼实现 |
+| `output/*LOD1.fbx`、`output/*LOD2.fbx` | 普通角色、完整羽翼角色、单独羽翼的自动减面级别 |
+| `output/Yuan_Winged.glb` | 通用预览与交换文件 |
 
-## 已实现与实际限制
+羽翼完全收拢后横向跨度约 0.85 m、前后占用约 1.4 m；翼骨长度保持不变。隐藏状态由网格可见性实现，不代表羽翼被切除或缩成很小的部件。已有 FK 骨骼与基础动作，尚无布料／毛发物理、完整控制器或生产级碰撞。
 
-文件中的材质数值也列于 `output/materials.json`，便于在 Unreal 中核对。
+## 裁衡
 
-模型具有 90 根骨骼，含手指、头发、衣摆、袖子、腰带和羽翼骨骼；每个顶点最多四个归一化骨骼影响。4 秒待机循环用于检查蒙皮是否能随骨骼运动。普通形态与羽翼形态共用骨架；并非 Epic Manny 的同拓扑或同骨架角色，需要单独配置 IK Retargeter。
+新发的八张武器图包含银色镂空护手、花叶纹、深色剑鞘与珠饰剑穗，与早前文字中的素剑不同。当前主展示版按最新图片制作，文字版作为可选方案保留；最终采用哪一版仍待用户明确。这是两种外观方案，不是新增两把剑的故事设定。
 
-面部支持基础双眼闭合形态键；尚无完整口腔、说话视素、ARKit 表情集或面捕绑定。原始网格分件保留，方便修改。材质主要依靠基础色、粗糙度与几何细节，未制作完整高低模烘焙贴图、统一 UV 图集和生产级碰撞体。衣物褶皱、刺绣和羽毛是参照图片做的几何近似，发型与脸部相似度仍需人工继续雕刻校对。
+- 图片版：`Caiheng_Sword`、`Caiheng_Sheath`、`Caiheng_Tassel`，各自提供 FBX 和 GLB。
+- 文字版：`Caiheng_Text_Sword`、`Caiheng_Text_Sheath`，各自提供 FBX 和 GLB。
+- 刃长“二尺五寸”暂按 1 尺 = 1/3 m 换算为约 0.8333 m；这一换算尚非世界观规定。
+- 武器是独立静态部件，剑穗尚未绑定物理骨骼。Blender 的金属细纹和皮革微表面未烘焙为 UE 贴图；FBX／GLB 保留网格与基础材质。
 
-Unreal Engine 未安装于当前环境；已在 Blender 做 FBX 回导检查，**没有声称完成 UE 实机导入验收**。头发、长裙、袖口与羽翼的物理、碰撞、动作重定向、大幅度动作穿插修正仍需在目标项目中设置。自动减面 LOD 需在实际镜头距离下检查细发丝与刺绣。
+[Unreal Engine 导入和组件设置](docs/UNREAL_IMPORT.md)
 
-## 重建
+## 验证范围
 
-无需额外 Python 库，使用 Blender 自带 Python：
+检查记录位于 `output/validation.json`、`output/fbx_roundtrip_validation.json`、`output/prop_validation.json`、`output/lod_validation.json` 和 `output/wing_components.json`。包括尺寸、回导后骨骼与 UV、最多四个归一化权重、动画顶点位移、羽翼收拢跨度与骨长保持。预览均由实际网格渲染。
+
+当前环境没有 Unreal Editor，没有生成 `.uasset` 或声称完成 UE 实机验收。自动 LOD、宽大羽翼、长发与衣袖仍需在目标项目里检查遮挡、穿插、物理和性能预算。表情仅含基础闭眼，没有口腔、口型或 ARKit 表情集。
+
+## 重建与打包
+
+Blender 4.3.2，无额外 Python 库：
 
 ```bash
-blender -b --factory-startup -t 8 --python src/build.py
-blender -b -t 8 --python src/export_lods.py
-blender -b -t 4 --python src/validate_exports.py
+blender -b --python-exit-code 1 --factory-startup -t 8 --python src/build.py
+blender -b --python-exit-code 1 -t 4 --python src/export_lods.py
+blender -b --python-exit-code 1 -t 4 --python src/export_wings.py
+blender -b --python-exit-code 1 -t 4 --python src/validate_exports.py
+blender -b --python-exit-code 1 -t 4 --python src/validate_props.py
+python3 src/package_release.py
 ```
 
-仅生成模型、不渲染预览：
-
-```bash
-blender -b --factory-startup -t 8 --python src/build.py -- --no-render
-```
-
-图片位于 `assets/reference/`，只作为用户提供的设计依据。代码按身体、服装、头发、羽翼、骨骼与导出拆分在 `src/`。修改后重新运行生成脚本会覆盖 `output/` 下同名模型；手工继续雕刻时请另存一个 Blender 文件。
+在第一条命令后追加 `-- --no-render` 可只生成模型。生成脚本会覆盖 `output/` 同名文件，手工继续雕刻时请另存源文件。人物和武器图片位于 `assets/reference/`；源场景打包了参考图。

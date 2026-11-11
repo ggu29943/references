@@ -224,5 +224,5 @@ def build():
                     (side*(.135+j*.005),.065+j*.006,height)]
             _strand(fine,_spline(points,27),.00032,'hair_l' if side>0 else 'hair_r')
     result=[cap.finish(col),primary.finish(col),bangs.finish(col),fine.finish(col)]
-    for ob in result: ob['reference']='Front, side, back and portrait user references; visual interpretation pending lore file.'
+    for ob in result: ob['reference']='User front, side, back and portrait references; canonical white waist-length hair without ornaments.'
     return result

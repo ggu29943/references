@@ -1,6 +1,7 @@
 import bpy, math
-from mathutils import Vector
+from mathutils import Vector, Euler
 from body import FINGER_POINTS
+from wings import BONE_POINTS
 
 def build(objects):
     bpy.ops.object.select_all(action='DESELECT')
@@ -17,7 +18,7 @@ def build(objects):
             pts=FINGER_POINTS[(fn,side)]
             for i in range(3):bone(f'{fn}_{i+1:02}_{side}',pts[i],pts[i+1],'hand_'+side if i==0 else f'{fn}_{i:02}_{side}')
         bone('thigh_'+side,(s*.075,0,.91),(s*.083,-.012,.52),'pelvis');bone('calf_'+side,(s*.083,-.012,.52),(s*.083,0,.11),'thigh_'+side);bone('foot_'+side,(s*.083,0,.11),(s*.083,-.083,.045),'calf_'+side);bone('ball_'+side,(s*.083,-.083,.045),(s*.083,-.135,.045),'foot_'+side)
-        w=[(s*.10,.10,1.33),(s*.44,.10,1.48),(s*.76,.10,1.44),(s*1.05,.10,1.18)]
+        w=BONE_POINTS[side]
         for i in range(3):bone(f'wing_{i+1:02}_{side}',w[i],w[i+1],'spine_03' if i==0 else f'wing_{i:02}_{side}')
         sl=[(s*.27,0,1.16),(s*.32,0,.91),(s*.35,0,.65)]
         for i in range(2):bone(f'sleeve_{side}_{i+1:02}',sl[i],sl[i+1],'upperarm_'+side if i==0 else f'sleeve_{side}_01')
@@ -51,13 +52,18 @@ def build(objects):
 
 def animate(rig):
     scene=bpy.context.scene;scene.render.fps=30;scene.frame_start=1;scene.frame_end=121
-    for b in rig.pose.bones:b.rotation_mode='XYZ'
+    for b in rig.pose.bones:b.rotation_mode='QUATERNION' if b.name.startswith('wing_') else 'XYZ'
     for frame in [1,31,61,91,121]:
         t=(frame-1)/120*math.tau
-        channels={'spine_02':(.008*math.sin(t),0,0),'neck_01':(-.006*math.sin(t),.01*math.sin(t),0),'hair_back_01':(.015*math.sin(t+.3),0,0),'hair_back_02':(.022*math.sin(t+.6),0,0)}
+        channels={'spine_02':(.008*math.sin(t),0,.005*math.sin(t)),'neck_01':(-.006*math.sin(t),.01*math.sin(t),.008*math.sin(t)),'hair_back_01':(.015*math.sin(t+.3),0,0),'hair_back_02':(.022*math.sin(t+.6),0,0)}
         for s,side in [(1,'l'),(-1,'r')]:
             channels['wing_01_'+side]=(.012*math.sin(t),0,s*.014*math.sin(t));channels['sleeve_'+side+'_01']=(.012*math.sin(t+.2),0,0)
-        for name,rot in channels.items():b=rig.pose.bones[name];b.rotation_euler=rot;b.keyframe_insert(data_path='rotation_euler',frame=frame,group=name)
+        for name,rot in channels.items():
+            b=rig.pose.bones[name]
+            if name.startswith('wing_'):
+                b.rotation_quaternion=Euler(rot).to_quaternion();b.keyframe_insert(data_path='rotation_quaternion',frame=frame,group=name)
+            else:
+                b.rotation_euler=rot;b.keyframe_insert(data_path='rotation_euler',frame=frame,group=name)
     rig.animation_data.action.name='Yuan_Idle_4s'
     scene.frame_set(1)
     return rig.animation_data.action

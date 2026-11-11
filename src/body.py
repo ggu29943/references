@@ -4,7 +4,7 @@ from common import *
 from math import sin,cos,pi,exp,sqrt
 FINGER_POINTS={}
 def head_surface(theta,z):
-    profile=[(1.433,.012,.032),(1.445,.035,.048),(1.465,.059,.064),(1.495,.079,.076),(1.535,.096,.085),(1.575,.102,.090),(1.615,.100,.091),(1.650,.090,.083),(1.681,.070,.064),(1.702,.039,.038),(1.712,.002,.002)]
+    profile=[(1.433,.012,.032),(1.445,.035,.048),(1.465,.055,.064),(1.495,.076,.076),(1.535,.096,.085),(1.575,.102,.090),(1.615,.100,.091),(1.650,.090,.083),(1.681,.070,.064),(1.702,.039,.038),(1.712,.002,.002)]
     for i in range(len(profile)-1):
         if profile[i][0]<=z<=profile[i+1][0]:
             a,b=profile[i],profile[i+1];t=(z-a[0])/(b[0]-a[0]);rx=a[1]*(1-t)+b[1]*t;ry=a[2]*(1-t)+b[2]*t;break
@@ -19,21 +19,27 @@ def head_surface(theta,z):
 
 def build():
     start=set(bpy.data.objects);collection('01_Body')
-    skin=material('Skin · porcelain warm',(.80,.663,.636,1),roughness=.48)
-    p=skin.node_tree.nodes.get('Principled BSDF');p.inputs['Subsurface Weight'].default_value=.065
+    skin=material('Skin · porcelain warm',(.84,.75,.72,1),roughness=.55)
+    p=skin.node_tree.nodes.get('Principled BSDF');p.inputs['Subsurface Weight'].default_value=.12
+    p.inputs['Specular IOR Level'].default_value=.25
+    if 'Subsurface Scale' in p.inputs:p.inputs['Subsurface Scale'].default_value=.008
     pink=material('Lips · muted rose',(.65,.40,.41,1),roughness=.49)
     liplight=material('Lips · lower highlight',(.76,.49,.48,1),roughness=.36)
     crease=material('Lip seam',(.40,.24,.27,1),roughness=.6)
     earshade=material('Ear inner warm',(.60,.365,.35,1))
-    whites=material('Eye · warm sclera',(.91,.93,.94,1),roughness=.25)
+    whites=material('Eye · warm sclera',(.74,.79,.83,1),roughness=1)
     liner=material('Lashes · silver charcoal',(.08,.075,.094,1),roughness=.6)
     brow=material('Eyebrows · silver ash',(.35,.32,.39,1),roughness=.7)
-    iris=material('Iris · ice blue',(.20,.39,.60,1),roughness=.25)
-    irisl=material('Iris · pale blue',(.42,.64,.83,1),roughness=.26)
-    irisd=material('Iris · limbal ring',(.07,.15,.27,1),roughness=.3)
-    pupil=material('Pupil · midnight blue',(.025,.045,.08,1),roughness=.22)
-    glint=material('Eye catchlight',(.98,.99,1,1),roughness=.1)
-    gp=glint.node_tree.nodes.get('Principled BSDF');gp.inputs['Emission Color'].default_value=(1,1,1,1);gp.inputs['Emission Strength'].default_value=.25
+    iris=material('Iris · ice blue',(.16,.34,.53,1),roughness=1)
+    irisl=material('Iris · pale blue',(.21,.39,.57,1),roughness=1)
+    irisd=material('Iris · limbal ring',(.09,.18,.29,1),roughness=1)
+    pupil=material('Pupil · midnight blue',(.035,.055,.085,1),roughness=1)
+    # Canon: no catchlights, glossy cornea highlights or emissive iris detail.
+    for eye_mat in [whites,iris,irisl,irisd,pupil]:
+        shader=eye_mat.node_tree.nodes.get('Principled BSDF')
+        shader.inputs['Specular IOR Level'].default_value=0
+        shader.inputs['Coat Weight'].default_value=0
+        shader.inputs['Emission Strength'].default_value=0
     # Dense quad head with integrated nose and pointed anime chin.
     verts=[];faces=[];nu=96;nv=64
     for i in range(nv+1):
@@ -101,10 +107,6 @@ def build():
         for p in io.data.polygons:p.material_index=0 if p.index<N else (3 if p.index>=2*N else (2 if p.index%3==0 else 1))
         io.shape_key_add(name='Basis');bk=io.shape_key_add(name='Blink_'+side.upper())
         for v in bk.data:v.co.z=cz;v.co.y=-.090
-        for k,(dx,dz,r) in enumerate([(-.0032,.0045,.0025),(.003,-.004,.0011)]):
-            o=uv_sphere('Eye highlight '+side+str(k),(cx+dx,-.098,cz+dz),(r,.0007,r),glint,'head',16,8)
-            o.shape_key_add(name='Basis');bk=o.shape_key_add(name='Blink_'+side.upper())
-            for v in bk.data:v.co.z-=dz;v.co.y+=.012
         for upper in [True,False]:
             pts=[ep(-1+2*j/24,1 if upper else -1) for j in range(25)]
             pts=[(x,y-.0015,z) for x,y,z in pts]

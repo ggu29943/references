@@ -10,11 +10,15 @@ required = ['Yuan_Character.blend', 'Yuan_Base.fbx', 'Yuan_Winged.fbx',
             'Yuan_Base_LOD1.fbx', 'Yuan_Base_LOD2.fbx', 'Yuan_Winged_LOD1.fbx',
             'Yuan_Winged_LOD2.fbx', 'preview_portrait.png', 'preview_front.png',
             'preview_back.png', 'preview_winged.png', 'check_blink.png',
-            'check_arm_pose.png', 'fbx_roundtrip_validation.json']
+            'check_arm_pose.png', 'fbx_roundtrip_validation.json', 'prop_validation.json',
+            'Yuan_Wings_Fold.fbx', 'Caiheng_Sword.fbx','Caiheng_Sheath.fbx','Caiheng_Tassel.fbx',
+            'Caiheng_Text_Sword.fbx','Caiheng_Text_Sheath.fbx',
+            'preview_folded.png','preview_weapon.png','preview_weapon_detail.png',
+            'Yuan_Wings_Only.fbx','Yuan_Wings_Only_LOD1.fbx','Yuan_Wings_Only_LOD2.fbx']
 for name in required:
     if not (OUT / name).is_file():
         raise FileNotFoundError(f'Missing deliverable: {name}')
-checks = json.loads((OUT / 'fbx_roundtrip_validation.json').read_text())
+checks = json.loads((OUT / 'fbx_roundtrip_validation.json').read_text())+json.loads((OUT / 'prop_validation.json').read_text())
 if not all(r['pass'] for r in checks):
     raise RuntimeError('FBX validation must pass before packaging')
 files = sorted(p for p in ROOT.rglob('*') if p.is_file()

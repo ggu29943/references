@@ -1,60 +1,35 @@
-# 源：Unreal Engine 5 导入说明
+# Unreal Engine 5 导入
 
-这是依据五张外貌参考制作的第一版角色模型。文字设定尚未收到，因此身高、隐藏结构和骨骼设计属于建模假设，后续需要核对。
+本工程在 Blender 中生成并做了 FBX 回导测试，尚未在 Unreal Editor 实机验证。不同 UE5 版本和 FBX／Interchange 导入器的选项位置可能不同。
 
-## 文件与规格
+## 身体、羽翼与动作
 
-| 文件 | 用途 |
-| --- | --- |
-| `output/Yuan_Character.blend` | Blender 4.3.2 可编辑源文件；包含独立部件、骨骼、基础表情和打包参考图 |
-| `output/Yuan_Base.fbx` | 不带羽翼的骨骼网格及基础待机动画 |
-| `output/Yuan_Winged.fbx` | 带羽翼的骨骼网格及基础待机动画 |
-| `output/Yuan_Winged.glb` | 通用预览／交换文件；UE 工作流优先使用 FBX |
-| `output/validation.json` | 当前生成版本的面数、蒙皮和形态键检查记录 |
+1. 导入 `Yuan_Base.fbx`，启用 Skeletal Mesh、Import Morph Targets 和 Import Animations。首次 Skeleton 留空创建新骨架。
+2. Import Uniform Scale 设为 1.0，启用场景单位转换（若提供）。源单位为米，UE 为厘米；角色中立网格高度应约 **170 cm**。
+3. 可直接导入 `Yuan_Winged.fbx` 查看完整形态。若要运行时隐藏羽翼，应使用 **身体 + 独立羽翼组件**：导入 `Yuan_Wings_Only.fbx`，选择身体的同一 Skeleton。
+4. 在角色蓝图中增加一个 SkeletalMeshComponent 放置独立羽翼，保持相同原点、旋转和单位缩放；可用 Set Leader Pose Component 跟随身体组件，或在 Animation Blueprint 使用 Copy Pose From Mesh。两者不要同时叠加。通过该羽翼组件的 Set Visibility 显隐，身体保留显示。
+5. 将 `Yuan_Wings_Fold.fbx` 的动画导入同一 Skeleton。源动作 `Yuan_Wings_Fold_Open_4s` 在帧 1 展开、31–61 收拢、91–121 再展开；30 fps，约 4 秒。动画资产名称可能由导入器改写。先在骨架编辑器检查肩、肘、腕三段动作，再连接动画状态机。该动作是收放验证，没有宣称完成飞行动作库。
+6. 基础待机源动作名为 `Yuan_Idle_4s`。`Blink_L` 与 `Blink_R` 位于多个眼部网格，驱动同名对应目标可共同闭合眼睛；导入器可能给形态键添加网格前缀。
 
-当前记录为 90 根骨骼，基础版约 18.0 万三角面，羽翼版约 23.3 万三角面，32 个材质。具体数字以重新构建后的 `validation.json` 为准。
+展开翼展应约 **600 cm**。收拢采用真实骨骼转动而非缩放，当前收拢横向跨度约 85 cm、前后占用约 140 cm，骨长误差接近浮点精度；实际动作中仍应检查羽毛互相遮挡和衣物穿插。
 
-自动减面版本的参考面数（最终以 `lod_validation.json` 为准）：
+## 材质
 
-| 级别 | 普通形态 | 羽翼形态 |
-| --- | ---: | ---: |
-| LOD0 | 180,000 | 232,800 |
-| LOD1 | 101,883 | 125,631 |
-| LOD2 | 66,727 | 77,631 |
+- 眼睛无高光是明确设定：眼白、虹膜和瞳孔在 UE 材质中将 **Specular = 0、Metallic = 0、Roughness = 1**，不加眼角膜高光层和发光点。
+- 角色皮肤的轻微透光来自 Blender 次表面散射，UE 中需另设皮肤材质，不能直接照搬节点网络。
+- 常服不含花形饰品和繁复刺绣。羽翼基础颜色为中性白，灯光阴影不代表羽毛本身变色。
+- 参考基础颜色、金属度和粗糙度可查看 `output/materials.json`。纹理图集、法线烘焙和完整 UE 材质实例未制作。
 
-各级别单独提供 FBX，不是已经配置好屏幕距离的 UE LOD 资产。形态键网格保留，其他部分自动减面；需特别检查细发丝、刺绣、羽片边缘和动作中的形状。
+## 武器
 
-## 首次导入
+`Caiheng_Sword.fbx`、`Caiheng_Sheath.fbx`、`Caiheng_Tassel.fbx` 是图片版独立 Static Mesh。剑的原点在柄刃衔接处，剑刃沿局部 +Z；剑鞘原点在鞘口；剑穗原点在系绳悬挂点。可建立手掌 Socket 后调整附件 Transform。剑穗当前为静态网格，未设置布料、链条骨骼或刚体运动。
 
-1. 在 UE5 内容浏览器创建角色目录，导入 `Yuan_Base.fbx` 或 `Yuan_Winged.fbx`。不同 UE5 小版本和 FBX／Interchange 导入器的选项位置可能不同。
-2. 启用 **Skeletal Mesh / Import Skeletal Mesh**；首次导入时 **Skeleton** 留空，创建新 Skeleton。两种外观来自同一套骨骼设计，可先导入其中一种，再用其 Skeleton 导入另一种，并检查导入器的骨骼兼容提示。
-3. **Import Uniform Scale** 设为 `1.0`，启用场景单位转换（若导入面板提供该选项）。源文件采用米；FBX 写出单位信息，UE 采用厘米。导入后测量脚底至头顶应约为 `172 cm`，并检查脚底位置及朝向。先核查单位转换，再处理尺寸异常，避免同时在多个位置叠加 `100` 倍缩放。
-4. 启用 **Import Morph Targets**。模型含 `Blink_L`、`Blink_R` 基础闭眼形态键；导入后在 Morph Target Preview 中逐一检查，名称可能被导入器加上网格前缀。眨眼由多个眼部网格上的对应形态键共同构成，应一起驱动；这些仅为基础表情原型。
-5. 启用 **Import Animations**。源动作 `Yuan_Idle_4s` 为 30 fps、帧 1–121 的约四秒待机循环，包含躯干、颈部及部分附属骨骼的轻微运动；UE 中生成的动画资产名可能不同。检查动画循环首尾及骨骼网格预览。
-6. 首次可导入材质以保留槽位，再在 UE 内校正材质。白衣、银发和羽翼的粗糙度、皮肤散射、眼部高光需在 UE 灯光下调整。Blender 节点效果不会完整转换成 UE 材质；当前主要依靠几何细节和常量材质，尚未制作完整烘焙贴图集。
+`Caiheng_Text_Sword.fbx`、`Caiheng_Text_Sheath.fbx` 是无护手、无纹饰、素白剑鞘的文字版。图文外观差异尚待用户最终选择。两版刃长约 83.33 cm，来自暂定的尺制换算，不是新确认的设定数值。
 
-## 动画重定向与附属骨骼
+图片版金属花叶、镂空护手和剑穗是几何结构；皮革细纹和刃面微纹理是 Blender 材质节点效果，未烘焙，需在 UE 内补相应材质。文字版剑材质使用高粗糙度和零镜面以符合“不反光”。
 
-模型采用自定义人形骨骼，名称借鉴 UE 常见命名；它不是 Epic Manny／Quinn 的原样骨架，不能仅凭名称直接套用其 Skeleton。
+## 重定向、LOD 与生产工作
 
-在 UE5 为源动画角色和“源”分别建立 **IK Rig**，设置 Retarget Root（通常为 `pelvis`），定义脊柱、双臂、双腿等 Retarget Chains，再建立 **IK Retargeter** 并映射。根据本模型的放松 A 姿势调整 Retarget Pose，检查肩膀、手腕、脚底接触及身高差异。骨骼目前主要提供 FK 变形，未附 UE Control Rig 或现成 IK Rig 资产。
+90 根骨骼采用自定义人形结构，名称借鉴 UE 命名，但不是 Manny／Quinn 的相同骨架。使用 IK Rig 与 IK Retargeter，设置 pelvis 为 Retarget Root，映射四肢与脊柱，调整放松 A 姿的 Retarget Pose。没有附现成 Control Rig、IK Rig 或 PhysicsAsset。
 
-`hair_*`、`skirt_*`、`sleeve_*`、`belt_*`、`wing_*` 是额外的头发、裙摆、衣袖、腰带和羽翼骨骼链。可在 Animation Blueprint 中使用 AnimDynamics／RigidBody，或自行设置其他次级运动方案。当前没有配置碰撞体、约束、Chaos Cloth 或自动物理；骨骼链的存在不代表布料物理已经完成。
-
-## 当前验证边界与后续工作
-
-已在 Blender 中生成模型、FBX／GLB，并检查顶点权重归一化、最多四个影响骨骼以及待机姿态和抬臂 20° 时的有限坐标。记录不等同于所有动作下的穿插、关节质量或面部表情验收。
-
-当前环境没有 Unreal Editor，未进行 UE 内实际导入、运行或重定向测试，也未生成 `.uasset`。应在目标 UE5 版本内完成以上验证。
-
-这是超过十万三角面的细节首版。仓库同时提供自动减面 LOD1／LOD2（独立 FBX，需要在 UE 中导入相应 LOD，并核查细节和变形）。投入游戏前还需按目标平台预算审查这些 LOD、合并材质与网格部件、烘焙细节贴图，并针对大幅抬臂、屈膝、裙摆与羽翼动作修整权重和碰撞。完整面部绑定、口型集、控制器及动作库仍需后续制作。
-
-## 重建
-
-在仓库根目录运行：
-
-```bash
-blender -b --factory-startup --python src/build.py -- --no-render
-```
-
-省略 `-- --no-render` 会额外输出审阅渲染图。生成器会覆盖 `output/` 中的同名生成文件；手工修改过的 `.blend` 请另存后再重建。
+头发、衣摆、袖子、腰带与羽翼骨骼可用于次级运动，但物理、碰撞和约束尚未配置。自动生成的 LOD1／LOD2 为独立 FBX，在 UE 中对应导入 LOD 并调整屏幕距离，特别检查细发丝、羽片边缘和形态键。面数以最新 JSON 验证记录为准。完整角色仍为高细节制作网格，材质槽合并、贴图烘焙、大动作变形修正和目标平台性能测试仍需继续完成。
