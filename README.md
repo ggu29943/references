@@ -2,13 +2,13 @@
 
 点阵风格的浏览器贪吃蛇小游戏。
 
-GitHub Pages 启用后的网址：https://ggu29943.github.io/references/
+在线游玩：https://ggu29943.github.io/references/
 
 ## GitHub Pages 发布
 
-在仓库的 Settings → Pages 中，将 Source 设为 Deploy from a branch，选择 `main` 分支和 `/(root)`，点击 Save。发布完成后，上方网址即可访问。此后提交到 `main` 的更新会自动发布。
+仓库使用 GitHub Actions 发布。Settings → Pages 的 Source 设为 GitHub Actions。
 
-根目录中的 `.nojekyll` 用于将文件直接作为静态网站发布。
+提交到 `main` 后，`.github/workflows/pages.yml` 会将 `index.html`、`game.js` 和 `.nojekyll` 发布到 GitHub Pages，也可以在 Actions 页面手动运行。
 
 ## 本地运行
 
